@@ -1,0 +1,415 @@
+Aims:
+  connection: doctrine
+  tableName: aims
+  columns:
+    id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    aim:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    sigla:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    presidente_id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    AimsAdmin:
+      local: id
+      foreign: aim_id
+      type: many
+    Distritos:
+      local: id
+      foreign: aim_id
+      type: many
+AimsAdmin:
+  connection: doctrine
+  tableName: aims_admin
+  columns:
+    id:
+      type: integer(8)
+      autoincrement: true
+      primary: true
+    aim_id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    user_id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Aims:
+      local: aim_id
+      foreign: id
+      type: one
+CfgCiudades:
+  connection: doctrine
+  tableName: cfg_ciudades
+  columns:
+    id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    provincia_id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    ciudad:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    CfgProvincias:
+      local: provincia_id
+      foreign: id
+      type: one
+    Clubes:
+      local: id
+      foreign: ciudad_id
+      type: many
+CfgDias:
+  connection: doctrine
+  tableName: cfg_dias
+  columns:
+    dia:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+  relations:
+    ClubesReunion:
+      local: dia
+      foreign: dia
+      type: many
+CfgPaises:
+  connection: doctrine
+  tableName: cfg_paises
+  columns:
+    id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    pais:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    CfgProvincias:
+      local: id
+      foreign: pais_id
+      type: many
+CfgProgramas:
+  connection: doctrine
+  tableName: cfg_programas
+  columns:
+    programa:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    logo:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    Clubes:
+      local: programa
+      foreign: programa
+      type: many
+CfgProvincias:
+  connection: doctrine
+  tableName: cfg_provincias
+  columns:
+    id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    pais_id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    provincia:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    CfgPaises:
+      local: pais_id
+      foreign: id
+      type: one
+    CfgCiudades:
+      local: id
+      foreign: provincia_id
+      type: many
+Clubes:
+  connection: doctrine
+  tableName: clubes
+  columns:
+    id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    club:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    email:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    url:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    direccion:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    presidente_id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    ciudad_id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    distrito_id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    programa:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Distritos:
+      local: distrito_id
+      foreign: id
+      type: one
+    CfgCiudades:
+      local: ciudad_id
+      foreign: id
+      type: one
+    CfgProgramas:
+      local: programa
+      foreign: programa
+      type: one
+    ClubesAdmin:
+      local: id
+      foreign: club_id
+      type: many
+    ClubesReunion:
+      local: id
+      foreign: club_id
+      type: many
+ClubesAdmin:
+  connection: doctrine
+  tableName: clubes_admin
+  columns:
+    id:
+      type: integer(8)
+      autoincrement: true
+      primary: true
+    club_id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    user_id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Clubes:
+      local: club_id
+      foreign: id
+      type: one
+ClubesReunion:
+  connection: doctrine
+  tableName: clubes_reunion
+  columns:
+    id:
+      type: integer(8)
+      autoincrement: true
+      primary: true
+    club_id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    dia:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    hora:
+      type: time(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    CfgDias:
+      local: dia
+      foreign: dia
+      type: one
+    Clubes:
+      local: club_id
+      foreign: id
+      type: one
+Distritos:
+  connection: doctrine
+  tableName: distritos
+  columns:
+    id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    distrito:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    rdr_id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    aim_id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    Aims:
+      local: aim_id
+      foreign: id
+      type: one
+    Clubes:
+      local: id
+      foreign: distrito_id
+      type: many
+    DistritosAdmin:
+      local: id
+      foreign: distrito_id
+      type: many
+DistritosAdmin:
+  connection: doctrine
+  tableName: distritos_admin
+  columns:
+    id:
+      type: integer(8)
+      autoincrement: true
+      primary: true
+    distrito_id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    user_id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Distritos:
+      local: distrito_id
+      foreign: id
+      type: one
