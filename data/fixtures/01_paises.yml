@@ -1,0 +1,31 @@
+CfgPaises:
+    Argentina:
+        id:     1
+        pais:   Argentina
+    Paraguay:
+        id:     2
+        pais:   Paraguay
+    Uruguay:
+        id:     3
+        pais:   Uruguay
+    Brasil:
+        id:     4
+        pais:   Brasil
+    Chile:
+        id:     5
+        pais:   Chile
+    Mexico:
+        id:     6
+        pais:   Mexico
+    Peru:
+        id:     7
+        pais:   Peru
+    Bolivia:
+        id:     8
+        pais:   Bolivia
+    Venezuela:
+        id:     15
+        pais:   Venezuela
+    Alemania:
+        id:     16
+        pais:   Alemania
