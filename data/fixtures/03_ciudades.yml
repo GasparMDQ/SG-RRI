@@ -1,0 +1,541 @@
+CfgCiudades:
+    1:
+        id:             1
+        provincia_id:   1
+        ciudad:         "Mar del Plata"
+    2:
+        id:             2
+        provincia_id:   4
+        ciudad:         "Mendoza"
+    3:
+        id:             3
+        provincia_id:   73
+        ciudad:         "Trinidad"
+    4:
+        id:             4
+        provincia_id:   73
+        ciudad:         "San Javier"
+    5:
+        id:             5
+        provincia_id:   67
+        ciudad:         "Cobija"
+    6:
+        id:             6
+        provincia_id:   2
+        ciudad:         "Cordoba"
+    7:
+        id:             7
+        provincia_id:   1
+        ciudad:         "La Plata"
+    8:
+        id:             8
+        provincia_id:   1
+        ciudad:         "Ayacucho"
+    9:
+        id:             9
+        provincia_id:   1
+        ciudad:         "Necochea"
+    10:
+        id:             10
+        provincia_id:   1
+        ciudad:         "Olavarria"
+    11:
+        id:             11
+        provincia_id:   1
+        ciudad:         "Trenque Lauquen"
+    12:
+        id:             12
+        provincia_id:   1
+        ciudad:         "Pinamar"
+    13:
+        id:             13
+        provincia_id:   1
+        ciudad:         "Tandil"
+    14:
+        id:             17
+        provincia_id:   43
+        ciudad:         "CABA"
+    18:
+        id:             18
+        provincia_id:   2
+        ciudad:         "Villa Maria"
+    19:
+        id:             19
+        provincia_id:   1
+        ciudad:         "Tres Arroyos"
+    20:
+        id:             20
+        provincia_id:   1
+        ciudad:         "Coronel Pringles"
+    21:
+        id:             21
+        provincia_id:   21
+        ciudad:         "Santa Rosa"
+    22:
+        id:             22
+        provincia_id:   13
+        ciudad:         "San Juan"
+    35:
+        id:             35
+        provincia_id:   1
+        ciudad:         "Bolivar"
+    37:
+        id:             37
+        provincia_id:   1
+        ciudad:         "Pehuajo"
+    38:
+        id:             38
+        provincia_id:   1
+        ciudad:         "Azul"
+    40: 
+        id:             40
+        provincia_id:   1
+        ciudad:         "Grand Bourg"
+    41:
+        id:             41
+        provincia_id:   1
+        ciudad:         "Adrogue"
+    42:
+        id:             42
+        provincia_id:   1
+        ciudad:         "Don Torcuato"
+    43:
+        id:             43
+        provincia_id:   1
+        ciudad:         "Vicente Lopez"
+    44:
+        id:             44
+        provincia_id:   1
+        ciudad:         "Moreno"
+    45:
+        id:             45
+        provincia_id:   1
+        ciudad:         "Boulogne"
+    46:
+        id:             46
+        provincia_id:   1
+        ciudad:         "Paso del Rey"
+    47:
+        id:             47
+        provincia_id:   1
+        ciudad:         "Bahia Blanca"
+    48:
+        id:             48
+        provincia_id:   1
+        ciudad:         "Merlo"
+    49:
+        id:             49
+        provincia_id:   1
+        ciudad:         "Glew"
+    50:
+        id:             50
+        provincia_id:   1
+        ciudad:         "Avellaneda"
+    51:
+        id: 51
+        provincia_id: 1
+        ciudad: "San Miguel"
+    52:
+        id:             52
+        provincia_id:   1
+        ciudad:         "Gerli"
+    53:
+        id:             53
+        provincia_id:   1
+        ciudad:         "Ituzaingo"
+    54:
+        id:             54
+        provincia_id:   1
+        ciudad:         "Banfield"
+    55:
+        id:             55
+        provincia_id:   1
+        ciudad:         "Lomas de Zamora"
+    56:
+        id:             56
+        provincia_id:   1
+        ciudad:         "Punta Alta"
+    57:
+        id:             57
+        provincia_id:   1
+        ciudad:         "Canuelas"
+    58:
+        id:             58
+        provincia_id:   1
+        ciudad: "       Quilmes"
+    59:
+        id:             59
+        provincia_id:   1
+        ciudad:         "Rafael Calzada"
+    60:
+        id:             60
+        provincia_id:   1
+        ciudad:         "Mercedes"
+    61:
+        id:             61
+        provincia_id:   1
+        ciudad:         "Remedios de Escalada"
+    62:
+        id:             62
+        provincia_id:   1
+        ciudad:         "Castelar"
+    63:
+        id:             63
+        provincia_id:   1
+        ciudad:         "Jose C. Paz"
+    64:
+        id:             64
+        provincia_id:   1
+        ciudad:         "Saenz Pena"
+    65:
+        id:             65
+        provincia_id:   1
+        ciudad:         "Carapachay"
+    66:
+        id:             66
+        provincia_id:   1
+        ciudad:         "San Isidro"
+    67:
+        id:             67
+        provincia_id:   1
+        ciudad:         "San Nicolas"
+    68:
+        id:             68
+        provincia_id:   1
+        ciudad:         "San Fernando"
+    69:
+        id:             69
+        provincia_id:   1
+        ciudad:         "Tigre"
+    70:
+        id:             70
+        provincia_id:   2
+        ciudad:         "Hernando"
+    71:
+        id:             71
+        provincia_id:   2
+        ciudad:         "Villa Carlos Paz"
+    72:
+        id:             72
+        provincia_id:   2
+        ciudad:         "Rio Tercero"
+    73:
+        id:             73
+        provincia_id:   2
+        ciudad:         "Villa Nueva"
+    74:
+        id:             74
+        provincia_id:   9
+        ciudad:         "Resistencia"
+    75:
+        id:             75
+        provincia_id:   17
+        ciudad:         "Rawson"
+    76:
+        id:             76
+        provincia_id:   17
+        ciudad:         "Comodoro Rivadavia"
+    77:
+        id:             77
+        provincia_id:   10
+        ciudad:         "Mercedes"
+    78:
+        id:             78
+        provincia_id:   10
+        ciudad:         "Corrientes"
+    79:
+        id:             79
+        provincia_id:   10
+        ciudad:         "Curuzu Cuatia"
+    80:
+        id:             80
+        provincia_id:   6
+        ciudad:         "Parana"
+    81:
+        id:             81
+        provincia_id:   6
+        ciudad:         "Concordia"
+    82:
+        id:             82
+        provincia_id:   15
+        ciudad:         "Clorinda"
+    83:
+        id:             83
+        provincia_id:   20
+        ciudad:         "La Rioja"
+    84:
+        id:             84
+        provincia_id:   4
+        ciudad:         "Las Heras"
+    85:
+        id:             85
+        provincia_id:   4
+        ciudad:         "Guaymallen"
+    86:
+        id:             86
+        provincia_id:   4
+        ciudad:         "Capilla del Rosario"
+    87:
+        id:             87
+        provincia_id:   4
+        ciudad:         "Godoy Cruz"
+    88:
+        id:             88
+        provincia_id:   4
+        ciudad:         "San Rafael"
+    89:
+        id:             89
+        provincia_id:   8
+        ciudad:         "Posadas"
+    90:
+        id:             90
+        provincia_id:   16
+        ciudad:         "Neuquen"
+    91:
+        id:             91
+        provincia_id:   14
+        ciudad:         "Cipolletti"
+    92:
+        id:             92
+        provincia_id:   14
+        ciudad:         "Villa Regina"
+    93:
+        id:             93
+        provincia_id:   13
+        ciudad:         "Santa Lucia"
+    94:
+        id:             94
+        provincia_id:   13
+        ciudad:         "Rivadavia"
+    95:
+        id:             95
+        provincia_id:   13
+        ciudad:         "Rawson"
+    96:
+        id:             96
+        provincia_id:   18
+        ciudad:         "San Luis"
+    97:
+        id:             97
+        provincia_id:   22
+        ciudad:         "Caleta Olivia"
+    98:
+        id:             98
+        provincia_id:   3
+        ciudad:         "Armstrong"
+    99:
+        id:             99
+        provincia_id:   3
+        ciudad:         "Ceres"
+    100:
+        id:             100
+        provincia_id:   3
+        ciudad:         "Rosario"
+    101:
+        id:             101
+        provincia_id:   3
+        ciudad:         "Esperanza"
+    102:
+        id:             102
+        provincia_id:   3
+        ciudad:         "Maria Susana"
+    103:
+        id:             103
+        provincia_id:   3
+        ciudad:         "Venado Tuerto"
+    104:
+        id:             104
+        provincia_id:   3
+        ciudad:         "Rafaela"
+    105:
+        id:             105
+        provincia_id:   3
+        ciudad:         "San Justo"
+    106:
+        id:             106
+        provincia_id:   3
+        ciudad:         "San Lorenzo"
+    107:
+        id:             107
+        provincia_id:   3
+        ciudad:         "Santa Fe"
+    108:
+        id:             108
+        provincia_id:   3
+        ciudad:         "San Vicente"
+    109:
+        id:             109
+        provincia_id:   3
+        ciudad:         "Llambi Campbell"
+    110:
+        id:             110
+        provincia_id:   3
+        ciudad:         "Salto Grande"
+    111:
+        id:             111
+        provincia_id:   11
+        ciudad:         "Santiago del Estero"
+    112:
+        id:             112
+        provincia_id:   5
+        ciudad:         "Tafi Viejo"
+    113:
+        id:             113
+        provincia_id:   5
+        ciudad:         "San Miguel de Tucuman"
+    114:
+        id:             114
+        provincia_id:   5
+        ciudad:         "Yerba Buena"
+    115:
+        id:             115
+        provincia_id:   54
+        ciudad:         "Ciudad del Este"
+    116:
+        id:             116
+        provincia_id:   54
+        ciudad:         "Presidente Franco"
+    117:
+        id:             117
+        provincia_id:   49
+        ciudad:         "Coronel Oviedo"
+    118:
+        id: 118
+        provincia_id: 55
+        ciudad: "Asuncion"
+    119:
+        id: 119
+        provincia_id: 51
+        ciudad: "Encarnacion"
+    120:
+        id: 120
+        provincia_id: 55
+        ciudad: "Luque"
+    121:
+        id: 121
+        provincia_id: 55
+        ciudad: "Fernando de la Mora"
+    122:
+        id: 122
+        provincia_id: 42
+        ciudad: "Las Piedras"
+    123:
+        id: 123
+        provincia_id: 42
+        ciudad: "Tala"
+    124:
+        id: 124
+        provincia_id: 42
+        ciudad: "La Paz"
+    125:
+        id: 125
+        provincia_id: 26
+        ciudad: "Colonia Valdense"
+    126:
+        id: 126
+        provincia_id: 26
+        ciudad: "Ombues de Lavalle"
+    127:
+        id: 127
+        provincia_id: 26
+        ciudad: "Nueva Helvecia"
+    128:
+        id: 128
+        provincia_id: 26
+        ciudad: "Carmelo"
+    129:
+        id: 129
+        provincia_id: 26
+        ciudad: "Colonia"
+    130:
+        id: 130
+        provincia_id: 28
+        ciudad: "Maldonado"
+    131:
+        id: 131
+        provincia_id: 28
+        ciudad: "Punta del Este"
+    132:
+        id: 132
+        provincia_id: 24
+        ciudad: "Montevideo"
+    133:
+        id: 133
+        provincia_id: 41
+        ciudad: "Tranqueras"
+    134:
+        id: 134
+        provincia_id: 36
+        ciudad: "Salto"
+    135:
+        id: 135
+        provincia_id: 35
+        ciudad: "San Gregorio"
+    136:
+        id: 136
+        provincia_id: 88
+        ciudad: "Lima"
+    137:
+        id: 137
+        provincia_id: 89
+        ciudad: "Merida"
+    138:
+        id: 138
+        provincia_id: 90
+        ciudad: "Mexico"
+    139:
+        id: 139
+        provincia_id: 91
+        ciudad: "Berlin"
+    140:
+        id: 140
+        provincia_id: 92
+        ciudad: "Apizaco"
+    141:
+        id: 141
+        provincia_id: 93
+        ciudad: "Puebla"
+    142:
+        id: 142
+        provincia_id: 93
+        ciudad: "Acatzingo"
+    143:
+        id: 143
+        provincia_id: 93
+        ciudad: "Atilxco"
+    144:
+        id: 144
+        provincia_id: 92
+        ciudad: "Huamantla"
+    145:
+        id: 145
+        provincia_id: 92
+        ciudad: "Tlaxcala"
+    146:
+        id: 146
+        provincia_id: 21
+        ciudad: "Toay"
+    147:
+        id: 147
+        provincia_id: 1
+        ciudad: "Dolores"
+    152:
+        id: 152
+        provincia_id: 15
+        ciudad: "Formosa"
+    153:
+        id: 153
+        provincia_id: 1
+        ciudad: "Villa Madero"
+    154:
+        id: 154
+        provincia_id: 1
+        ciudad: "Florencio Varela"
+    155:
+        id: 155
+        provincia_id: 1
+        ciudad: "Carmen de Areco"
+    156:
+        id: 156
+        provincia_id: 2
+        ciudad: "La Calera"
