@@ -14,12 +14,12 @@ abstract class BaseClubesAdminFormFilter extends BaseFormFilterDoctrine
   {
     $this->setWidgets(array(
       'club_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Clubes'), 'add_empty' => true)),
-      'user_id' => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'user_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
       'club_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Clubes'), 'column' => 'id')),
-      'user_id' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'user_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('sfGuardUser'), 'column' => 'id')),
     ));
 
     $this->widgetSchema->setNameFormat('clubes_admin_filters[%s]');
@@ -41,7 +41,7 @@ abstract class BaseClubesAdminFormFilter extends BaseFormFilterDoctrine
     return array(
       'id'      => 'Number',
       'club_id' => 'ForeignKey',
-      'user_id' => 'Number',
+      'user_id' => 'ForeignKey',
     );
   }
 }

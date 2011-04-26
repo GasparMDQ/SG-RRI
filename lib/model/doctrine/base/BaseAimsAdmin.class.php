@@ -11,15 +11,18 @@ Doctrine_Manager::getInstance()->bindComponent('AimsAdmin', 'doctrine');
  * @property integer $aim_id
  * @property integer $user_id
  * @property Aims $Aims
+ * @property sfGuardUser $sfGuardUser
  * 
- * @method integer   getId()      Returns the current record's "id" value
- * @method integer   getAimId()   Returns the current record's "aim_id" value
- * @method integer   getUserId()  Returns the current record's "user_id" value
- * @method Aims      getAims()    Returns the current record's "Aims" value
- * @method AimsAdmin setId()      Sets the current record's "id" value
- * @method AimsAdmin setAimId()   Sets the current record's "aim_id" value
- * @method AimsAdmin setUserId()  Sets the current record's "user_id" value
- * @method AimsAdmin setAims()    Sets the current record's "Aims" value
+ * @method integer     getId()          Returns the current record's "id" value
+ * @method integer     getAimId()       Returns the current record's "aim_id" value
+ * @method integer     getUserId()      Returns the current record's "user_id" value
+ * @method Aims        getAims()        Returns the current record's "Aims" value
+ * @method sfGuardUser getSfGuardUser() Returns the current record's "sfGuardUser" value
+ * @method AimsAdmin   setId()          Sets the current record's "id" value
+ * @method AimsAdmin   setAimId()       Sets the current record's "aim_id" value
+ * @method AimsAdmin   setUserId()      Sets the current record's "user_id" value
+ * @method AimsAdmin   setAims()        Sets the current record's "Aims" value
+ * @method AimsAdmin   setSfGuardUser() Sets the current record's "sfGuardUser" value
  * 
  * @package    base_de_datos
  * @subpackage model
@@ -62,6 +65,10 @@ abstract class BaseAimsAdmin extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('Aims', array(
              'local' => 'aim_id',
+             'foreign' => 'id'));
+
+        $this->hasOne('sfGuardUser', array(
+             'local' => 'user_id',
              'foreign' => 'id'));
     }
 }

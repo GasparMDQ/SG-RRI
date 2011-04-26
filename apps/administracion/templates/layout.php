@@ -13,6 +13,9 @@
       <div id="menu">
         <ul>
           <li>
+            <?php echo link_to('Home', 'homepage') ?>
+          </li>
+          <li>
             <?php echo link_to('Paises', 'cfg_paises') ?>
           </li>
           <li>

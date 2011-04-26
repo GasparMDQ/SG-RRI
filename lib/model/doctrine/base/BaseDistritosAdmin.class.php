@@ -11,15 +11,18 @@ Doctrine_Manager::getInstance()->bindComponent('DistritosAdmin', 'doctrine');
  * @property integer $distrito_id
  * @property integer $user_id
  * @property Distritos $Distritos
+ * @property sfGuardUser $sfGuardUser
  * 
  * @method integer        getId()          Returns the current record's "id" value
  * @method integer        getDistritoId()  Returns the current record's "distrito_id" value
  * @method integer        getUserId()      Returns the current record's "user_id" value
  * @method Distritos      getDistritos()   Returns the current record's "Distritos" value
+ * @method sfGuardUser    getSfGuardUser() Returns the current record's "sfGuardUser" value
  * @method DistritosAdmin setId()          Sets the current record's "id" value
  * @method DistritosAdmin setDistritoId()  Sets the current record's "distrito_id" value
  * @method DistritosAdmin setUserId()      Sets the current record's "user_id" value
  * @method DistritosAdmin setDistritos()   Sets the current record's "Distritos" value
+ * @method DistritosAdmin setSfGuardUser() Sets the current record's "sfGuardUser" value
  * 
  * @package    base_de_datos
  * @subpackage model
@@ -62,6 +65,10 @@ abstract class BaseDistritosAdmin extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('Distritos', array(
              'local' => 'distrito_id',
+             'foreign' => 'id'));
+
+        $this->hasOne('sfGuardUser', array(
+             'local' => 'user_id',
              'foreign' => 'id'));
     }
 }

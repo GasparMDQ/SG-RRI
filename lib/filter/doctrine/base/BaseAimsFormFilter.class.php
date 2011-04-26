@@ -15,13 +15,13 @@ abstract class BaseAimsFormFilter extends BaseFormFilterDoctrine
     $this->setWidgets(array(
       'aim'           => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'sigla'         => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'presidente_id' => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'presidente_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
       'aim'           => new sfValidatorPass(array('required' => false)),
       'sigla'         => new sfValidatorPass(array('required' => false)),
-      'presidente_id' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'presidente_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('sfGuardUser'), 'column' => 'id')),
     ));
 
     $this->widgetSchema->setNameFormat('aims_filters[%s]');
@@ -44,7 +44,7 @@ abstract class BaseAimsFormFilter extends BaseFormFilterDoctrine
       'id'            => 'Number',
       'aim'           => 'Text',
       'sigla'         => 'Text',
-      'presidente_id' => 'Number',
+      'presidente_id' => 'ForeignKey',
     );
   }
 }

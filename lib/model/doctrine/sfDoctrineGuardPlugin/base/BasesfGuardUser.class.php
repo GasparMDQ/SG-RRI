@@ -21,6 +21,12 @@
  * @property Doctrine_Collection $sfGuardUserGroup
  * @property sfGuardRememberKey $RememberKeys
  * @property sfGuardForgotPassword $ForgotPassword
+ * @property Doctrine_Collection $Aims
+ * @property Doctrine_Collection $AimsAdmin
+ * @property Doctrine_Collection $Clubes
+ * @property Doctrine_Collection $ClubesAdmin
+ * @property Doctrine_Collection $Distritos
+ * @property Doctrine_Collection $DistritosAdmin
  * 
  * @method string                getFirstName()             Returns the current record's "first_name" value
  * @method string                getLastName()              Returns the current record's "last_name" value
@@ -38,6 +44,12 @@
  * @method Doctrine_Collection   getSfGuardUserGroup()      Returns the current record's "sfGuardUserGroup" collection
  * @method sfGuardRememberKey    getRememberKeys()          Returns the current record's "RememberKeys" value
  * @method sfGuardForgotPassword getForgotPassword()        Returns the current record's "ForgotPassword" value
+ * @method Doctrine_Collection   getAims()                  Returns the current record's "Aims" collection
+ * @method Doctrine_Collection   getAimsAdmin()             Returns the current record's "AimsAdmin" collection
+ * @method Doctrine_Collection   getClubes()                Returns the current record's "Clubes" collection
+ * @method Doctrine_Collection   getClubesAdmin()           Returns the current record's "ClubesAdmin" collection
+ * @method Doctrine_Collection   getDistritos()             Returns the current record's "Distritos" collection
+ * @method Doctrine_Collection   getDistritosAdmin()        Returns the current record's "DistritosAdmin" collection
  * @method sfGuardUser           setFirstName()             Sets the current record's "first_name" value
  * @method sfGuardUser           setLastName()              Sets the current record's "last_name" value
  * @method sfGuardUser           setEmailAddress()          Sets the current record's "email_address" value
@@ -54,6 +66,12 @@
  * @method sfGuardUser           setSfGuardUserGroup()      Sets the current record's "sfGuardUserGroup" collection
  * @method sfGuardUser           setRememberKeys()          Sets the current record's "RememberKeys" value
  * @method sfGuardUser           setForgotPassword()        Sets the current record's "ForgotPassword" value
+ * @method sfGuardUser           setAims()                  Sets the current record's "Aims" collection
+ * @method sfGuardUser           setAimsAdmin()             Sets the current record's "AimsAdmin" collection
+ * @method sfGuardUser           setClubes()                Sets the current record's "Clubes" collection
+ * @method sfGuardUser           setClubesAdmin()           Sets the current record's "ClubesAdmin" collection
+ * @method sfGuardUser           setDistritos()             Sets the current record's "Distritos" collection
+ * @method sfGuardUser           setDistritosAdmin()        Sets the current record's "DistritosAdmin" collection
  * 
  * @package    base_de_datos
  * @subpackage model
@@ -146,6 +164,30 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'foreign' => 'user_id'));
 
         $this->hasOne('sfGuardForgotPassword as ForgotPassword', array(
+             'local' => 'id',
+             'foreign' => 'user_id'));
+
+        $this->hasMany('Aims', array(
+             'local' => 'id',
+             'foreign' => 'presidente_id'));
+
+        $this->hasMany('AimsAdmin', array(
+             'local' => 'id',
+             'foreign' => 'user_id'));
+
+        $this->hasMany('Clubes', array(
+             'local' => 'id',
+             'foreign' => 'presidente_id'));
+
+        $this->hasMany('ClubesAdmin', array(
+             'local' => 'id',
+             'foreign' => 'user_id'));
+
+        $this->hasMany('Distritos', array(
+             'local' => 'id',
+             'foreign' => 'rdr_id'));
+
+        $this->hasMany('DistritosAdmin', array(
              'local' => 'id',
              'foreign' => 'user_id'));
 

@@ -17,13 +17,13 @@ abstract class BaseClubesAdminForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'      => new sfWidgetFormInputHidden(),
       'club_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Clubes'), 'add_empty' => false)),
-      'user_id' => new sfWidgetFormInputText(),
+      'user_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => false)),
     ));
 
     $this->setValidators(array(
       'id'      => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'club_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Clubes'))),
-      'user_id' => new sfValidatorInteger(),
+      'user_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'))),
     ));
 
     $this->widgetSchema->setNameFormat('clubes_admin[%s]');

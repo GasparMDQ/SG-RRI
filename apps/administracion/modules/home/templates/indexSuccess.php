@@ -1,0 +1,1 @@
+<div>Pantalla principal de administraci&oacute;n</div>

@@ -18,14 +18,14 @@ abstract class BaseAimsForm extends BaseFormDoctrine
       'id'            => new sfWidgetFormInputHidden(),
       'aim'           => new sfWidgetFormInputText(),
       'sigla'         => new sfWidgetFormInputText(),
-      'presidente_id' => new sfWidgetFormInputText(),
+      'presidente_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
       'id'            => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'aim'           => new sfValidatorString(array('max_length' => 255)),
       'sigla'         => new sfValidatorString(array('max_length' => 255)),
-      'presidente_id' => new sfValidatorInteger(),
+      'presidente_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('aims[%s]');

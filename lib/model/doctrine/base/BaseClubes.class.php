@@ -21,6 +21,7 @@ Doctrine_Manager::getInstance()->bindComponent('Clubes', 'doctrine');
  * @property CfgProgramas $CfgProgramas
  * @property Doctrine_Collection $ClubesAdmin
  * @property Doctrine_Collection $ClubesReunion
+ * @property sfGuardUser $sfGuardUser
  * 
  * @method integer             getId()            Returns the current record's "id" value
  * @method string              getClub()          Returns the current record's "club" value
@@ -36,6 +37,7 @@ Doctrine_Manager::getInstance()->bindComponent('Clubes', 'doctrine');
  * @method CfgProgramas        getCfgProgramas()  Returns the current record's "CfgProgramas" value
  * @method Doctrine_Collection getClubesAdmin()   Returns the current record's "ClubesAdmin" collection
  * @method Doctrine_Collection getClubesReunion() Returns the current record's "ClubesReunion" collection
+ * @method sfGuardUser         getSfGuardUser()   Returns the current record's "sfGuardUser" value
  * @method Clubes              setId()            Sets the current record's "id" value
  * @method Clubes              setClub()          Sets the current record's "club" value
  * @method Clubes              setEmail()         Sets the current record's "email" value
@@ -50,6 +52,7 @@ Doctrine_Manager::getInstance()->bindComponent('Clubes', 'doctrine');
  * @method Clubes              setCfgProgramas()  Sets the current record's "CfgProgramas" value
  * @method Clubes              setClubesAdmin()   Sets the current record's "ClubesAdmin" collection
  * @method Clubes              setClubesReunion() Sets the current record's "ClubesReunion" collection
+ * @method Clubes              setSfGuardUser()   Sets the current record's "sfGuardUser" value
  * 
  * @package    base_de_datos
  * @subpackage model
@@ -165,5 +168,9 @@ abstract class BaseClubes extends sfDoctrineRecord
         $this->hasMany('ClubesReunion', array(
              'local' => 'id',
              'foreign' => 'club_id'));
+
+        $this->hasOne('sfGuardUser', array(
+             'local' => 'presidente_id',
+             'foreign' => 'id'));
     }
 }

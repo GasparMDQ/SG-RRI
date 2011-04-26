@@ -14,13 +14,13 @@ abstract class BaseDistritosFormFilter extends BaseFormFilterDoctrine
   {
     $this->setWidgets(array(
       'distrito' => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'rdr_id'   => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'rdr_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => true)),
       'aim_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Aims'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
       'distrito' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
-      'rdr_id'   => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'rdr_id'   => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('sfGuardUser'), 'column' => 'id')),
       'aim_id'   => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Aims'), 'column' => 'id')),
     ));
 
@@ -43,7 +43,7 @@ abstract class BaseDistritosFormFilter extends BaseFormFilterDoctrine
     return array(
       'id'       => 'Number',
       'distrito' => 'Number',
-      'rdr_id'   => 'Number',
+      'rdr_id'   => 'ForeignKey',
       'aim_id'   => 'ForeignKey',
     );
   }

@@ -14,6 +14,7 @@ Doctrine_Manager::getInstance()->bindComponent('Distritos', 'doctrine');
  * @property Aims $Aims
  * @property Doctrine_Collection $Clubes
  * @property Doctrine_Collection $DistritosAdmin
+ * @property sfGuardUser $sfGuardUser
  * 
  * @method integer             getId()             Returns the current record's "id" value
  * @method integer             getDistrito()       Returns the current record's "distrito" value
@@ -22,6 +23,7 @@ Doctrine_Manager::getInstance()->bindComponent('Distritos', 'doctrine');
  * @method Aims                getAims()           Returns the current record's "Aims" value
  * @method Doctrine_Collection getClubes()         Returns the current record's "Clubes" collection
  * @method Doctrine_Collection getDistritosAdmin() Returns the current record's "DistritosAdmin" collection
+ * @method sfGuardUser         getSfGuardUser()    Returns the current record's "sfGuardUser" value
  * @method Distritos           setId()             Sets the current record's "id" value
  * @method Distritos           setDistrito()       Sets the current record's "distrito" value
  * @method Distritos           setRdrId()          Sets the current record's "rdr_id" value
@@ -29,6 +31,7 @@ Doctrine_Manager::getInstance()->bindComponent('Distritos', 'doctrine');
  * @method Distritos           setAims()           Sets the current record's "Aims" value
  * @method Distritos           setClubes()         Sets the current record's "Clubes" collection
  * @method Distritos           setDistritosAdmin() Sets the current record's "DistritosAdmin" collection
+ * @method Distritos           setSfGuardUser()    Sets the current record's "sfGuardUser" value
  * 
  * @package    base_de_datos
  * @subpackage model
@@ -91,5 +94,9 @@ abstract class BaseDistritos extends sfDoctrineRecord
         $this->hasMany('DistritosAdmin', array(
              'local' => 'id',
              'foreign' => 'distrito_id'));
+
+        $this->hasOne('sfGuardUser', array(
+             'local' => 'rdr_id',
+             'foreign' => 'id'));
     }
 }

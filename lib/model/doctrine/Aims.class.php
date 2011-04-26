@@ -12,5 +12,9 @@
  */
 class Aims extends BaseAims
 {
+  public function __toString()
+  {
+    return sprintf('%s', $this->getSigla());
+  }
 
 }

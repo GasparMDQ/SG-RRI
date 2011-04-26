@@ -14,12 +14,12 @@ abstract class BaseDistritosAdminFormFilter extends BaseFormFilterDoctrine
   {
     $this->setWidgets(array(
       'distrito_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Distritos'), 'add_empty' => true)),
-      'user_id'     => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'user_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
       'distrito_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Distritos'), 'column' => 'id')),
-      'user_id'     => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'user_id'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('sfGuardUser'), 'column' => 'id')),
     ));
 
     $this->widgetSchema->setNameFormat('distritos_admin_filters[%s]');
@@ -41,7 +41,7 @@ abstract class BaseDistritosAdminFormFilter extends BaseFormFilterDoctrine
     return array(
       'id'          => 'Number',
       'distrito_id' => 'ForeignKey',
-      'user_id'     => 'Number',
+      'user_id'     => 'ForeignKey',
     );
   }
 }

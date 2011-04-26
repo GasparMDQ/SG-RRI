@@ -11,15 +11,18 @@ Doctrine_Manager::getInstance()->bindComponent('ClubesAdmin', 'doctrine');
  * @property integer $club_id
  * @property integer $user_id
  * @property Clubes $Clubes
+ * @property sfGuardUser $sfGuardUser
  * 
- * @method integer     getId()      Returns the current record's "id" value
- * @method integer     getClubId()  Returns the current record's "club_id" value
- * @method integer     getUserId()  Returns the current record's "user_id" value
- * @method Clubes      getClubes()  Returns the current record's "Clubes" value
- * @method ClubesAdmin setId()      Sets the current record's "id" value
- * @method ClubesAdmin setClubId()  Sets the current record's "club_id" value
- * @method ClubesAdmin setUserId()  Sets the current record's "user_id" value
- * @method ClubesAdmin setClubes()  Sets the current record's "Clubes" value
+ * @method integer     getId()          Returns the current record's "id" value
+ * @method integer     getClubId()      Returns the current record's "club_id" value
+ * @method integer     getUserId()      Returns the current record's "user_id" value
+ * @method Clubes      getClubes()      Returns the current record's "Clubes" value
+ * @method sfGuardUser getSfGuardUser() Returns the current record's "sfGuardUser" value
+ * @method ClubesAdmin setId()          Sets the current record's "id" value
+ * @method ClubesAdmin setClubId()      Sets the current record's "club_id" value
+ * @method ClubesAdmin setUserId()      Sets the current record's "user_id" value
+ * @method ClubesAdmin setClubes()      Sets the current record's "Clubes" value
+ * @method ClubesAdmin setSfGuardUser() Sets the current record's "sfGuardUser" value
  * 
  * @package    base_de_datos
  * @subpackage model
@@ -62,6 +65,10 @@ abstract class BaseClubesAdmin extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('Clubes', array(
              'local' => 'club_id',
+             'foreign' => 'id'));
+
+        $this->hasOne('sfGuardUser', array(
+             'local' => 'user_id',
              'foreign' => 'id'));
     }
 }

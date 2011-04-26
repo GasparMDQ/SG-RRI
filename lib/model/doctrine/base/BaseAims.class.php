@@ -13,6 +13,7 @@ Doctrine_Manager::getInstance()->bindComponent('Aims', 'doctrine');
  * @property integer $presidente_id
  * @property Doctrine_Collection $AimsAdmin
  * @property Doctrine_Collection $Distritos
+ * @property sfGuardUser $sfGuardUser
  * 
  * @method integer             getId()            Returns the current record's "id" value
  * @method string              getAim()           Returns the current record's "aim" value
@@ -20,12 +21,14 @@ Doctrine_Manager::getInstance()->bindComponent('Aims', 'doctrine');
  * @method integer             getPresidenteId()  Returns the current record's "presidente_id" value
  * @method Doctrine_Collection getAimsAdmin()     Returns the current record's "AimsAdmin" collection
  * @method Doctrine_Collection getDistritos()     Returns the current record's "Distritos" collection
+ * @method sfGuardUser         getSfGuardUser()   Returns the current record's "sfGuardUser" value
  * @method Aims                setId()            Sets the current record's "id" value
  * @method Aims                setAim()           Sets the current record's "aim" value
  * @method Aims                setSigla()         Sets the current record's "sigla" value
  * @method Aims                setPresidenteId()  Sets the current record's "presidente_id" value
  * @method Aims                setAimsAdmin()     Sets the current record's "AimsAdmin" collection
  * @method Aims                setDistritos()     Sets the current record's "Distritos" collection
+ * @method Aims                setSfGuardUser()   Sets the current record's "sfGuardUser" value
  * 
  * @package    base_de_datos
  * @subpackage model
@@ -68,7 +71,7 @@ abstract class BaseAims extends sfDoctrineRecord
              'fixed' => 0,
              'unsigned' => false,
              'primary' => false,
-             'notnull' => true,
+             'notnull' => false,
              'autoincrement' => false,
              'length' => 8,
              ));
@@ -84,5 +87,9 @@ abstract class BaseAims extends sfDoctrineRecord
         $this->hasMany('Distritos', array(
              'local' => 'id',
              'foreign' => 'aim_id'));
+
+        $this->hasOne('sfGuardUser', array(
+             'local' => 'presidente_id',
+             'foreign' => 'id'));
     }
 }

@@ -17,13 +17,13 @@ abstract class BaseDistritosAdminForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'          => new sfWidgetFormInputHidden(),
       'distrito_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Distritos'), 'add_empty' => false)),
-      'user_id'     => new sfWidgetFormInputText(),
+      'user_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => false)),
     ));
 
     $this->setValidators(array(
       'id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'distrito_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Distritos'))),
-      'user_id'     => new sfValidatorInteger(),
+      'user_id'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'))),
     ));
 
     $this->widgetSchema->setNameFormat('distritos_admin[%s]');

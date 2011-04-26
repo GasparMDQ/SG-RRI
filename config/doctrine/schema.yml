@@ -27,7 +27,7 @@ Aims:
       fixed: false
       unsigned: false
       primary: false
-      notnull: true
+      notnull: false
       autoincrement: false
   relations:
     AimsAdmin:
@@ -38,6 +38,11 @@ Aims:
       local: id
       foreign: aim_id
       type: many
+    sfGuardUser:
+      local: presidente_id
+      foreign: id
+      type: one
+
 AimsAdmin:
   connection: doctrine
   tableName: aims_admin
@@ -65,6 +70,11 @@ AimsAdmin:
       local: aim_id
       foreign: id
       type: one
+    sfGuardUser:
+      local: user_id
+      foreign: id
+      type: one
+
 CfgCiudades:
   connection: doctrine
   tableName: cfg_ciudades
@@ -289,6 +299,11 @@ Clubes:
       local: id
       foreign: club_id
       type: many
+    sfGuardUser:
+      local: presidente_id
+      foreign: id
+      type: one
+
 ClubesAdmin:
   connection: doctrine
   tableName: clubes_admin
@@ -316,6 +331,11 @@ ClubesAdmin:
       local: club_id
       foreign: id
       type: one
+    sfGuardUser:
+      local: user_id
+      foreign: id
+      type: one
+
 ClubesReunion:
   connection: doctrine
   tableName: clubes_reunion
@@ -398,6 +418,11 @@ Distritos:
       local: id
       foreign: distrito_id
       type: many
+    sfGuardUser:
+      local: rdr_id
+      foreign: id
+      type: one
+
 DistritosAdmin:
   connection: doctrine
   tableName: distritos_admin
@@ -425,3 +450,8 @@ DistritosAdmin:
       local: distrito_id
       foreign: id
       type: one
+    sfGuardUser:
+      local: user_id
+      foreign: id
+      type: one
+

@@ -14,12 +14,12 @@ abstract class BaseAimsAdminFormFilter extends BaseFormFilterDoctrine
   {
     $this->setWidgets(array(
       'aim_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Aims'), 'add_empty' => true)),
-      'user_id' => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'user_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
       'aim_id'  => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Aims'), 'column' => 'id')),
-      'user_id' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'user_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('sfGuardUser'), 'column' => 'id')),
     ));
 
     $this->widgetSchema->setNameFormat('aims_admin_filters[%s]');
@@ -41,7 +41,7 @@ abstract class BaseAimsAdminFormFilter extends BaseFormFilterDoctrine
     return array(
       'id'      => 'Number',
       'aim_id'  => 'ForeignKey',
-      'user_id' => 'Number',
+      'user_id' => 'ForeignKey',
     );
   }
 }
