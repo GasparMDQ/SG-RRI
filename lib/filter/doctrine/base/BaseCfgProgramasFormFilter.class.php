@@ -13,10 +13,12 @@ abstract class BaseCfgProgramasFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
+      'programa' => new sfWidgetFormFilterInput(),
       'logo'     => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
+      'programa' => new sfValidatorPass(array('required' => false)),
       'logo'     => new sfValidatorPass(array('required' => false)),
     ));
 
@@ -37,6 +39,7 @@ abstract class BaseCfgProgramasFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
+      'id'       => 'Number',
       'programa' => 'Text',
       'logo'     => 'Text',
     );

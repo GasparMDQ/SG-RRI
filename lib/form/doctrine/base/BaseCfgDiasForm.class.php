@@ -15,11 +15,13 @@ abstract class BaseCfgDiasForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'dia' => new sfWidgetFormInputHidden(),
+      'id'  => new sfWidgetFormInputHidden(),
+      'dia' => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
-      'dia' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('dia')), 'empty_value' => $this->getObject()->get('dia'), 'required' => false)),
+      'id'  => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'dia' => new sfValidatorString(array('max_length' => 255, 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('cfg_dias[%s]');

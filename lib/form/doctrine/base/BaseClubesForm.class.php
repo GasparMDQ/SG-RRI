@@ -23,7 +23,7 @@ abstract class BaseClubesForm extends BaseFormDoctrine
       'presidente_id' => new sfWidgetFormInputText(),
       'ciudad_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('CfgCiudades'), 'add_empty' => true)),
       'distrito_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Distritos'), 'add_empty' => false)),
-      'programa'      => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('CfgProgramas'), 'add_empty' => false)),
+      'programa_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('CfgProgramas'), 'add_empty' => false)),
     ));
 
     $this->setValidators(array(
@@ -35,7 +35,7 @@ abstract class BaseClubesForm extends BaseFormDoctrine
       'presidente_id' => new sfValidatorInteger(array('required' => false)),
       'ciudad_id'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('CfgCiudades'), 'required' => false)),
       'distrito_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Distritos'))),
-      'programa'      => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('CfgProgramas'))),
+      'programa_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('CfgProgramas'))),
     ));
 
     $this->widgetSchema->setNameFormat('clubes[%s]');

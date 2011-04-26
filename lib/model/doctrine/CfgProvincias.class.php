@@ -13,4 +13,9 @@
 class CfgProvincias extends BaseCfgProvincias
 {
 
+  public function __toString()
+  {
+    return sprintf('%s', $this->getProvincia());
+  }
+
 }

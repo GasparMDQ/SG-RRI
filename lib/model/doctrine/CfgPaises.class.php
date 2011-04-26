@@ -13,4 +13,9 @@
 class CfgPaises extends BaseCfgPaises
 {
 
+  public function __toString()
+  {
+    return sprintf('%s', $this->getPais());
+  }
+
 }

@@ -1,0 +1,88 @@
+cfg_dias:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                cfgDias
+    module:               dias
+    prefix_path:          /dias
+    column:               dia
+    with_wildcard_routes: true
+
+clubes:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Clubes
+    module:               clubes
+    prefix_path:          /clubes
+    column:               id
+    with_wildcard_routes: true
+
+distritos:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Distritos
+    module:               distritos
+    prefix_path:          /distritos
+    column:               id
+    with_wildcard_routes: true
+
+aims:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Aims
+    module:               aims
+    prefix_path:          /aims
+    column:               id
+    with_wildcard_routes: true
+
+cfg_programas:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                CfgProgramas
+    module:               programas
+    prefix_path:          /programas
+    column:               programa
+    with_wildcard_routes: true
+
+cfg_paises:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                CfgPaises
+    module:               paises
+    prefix_path:          /paises
+    column:               id
+    with_wildcard_routes: true
+
+cfg_provincias:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                CfgProvincias
+    module:               provincias
+    prefix_path:          /provincias
+    column:               id
+    with_wildcard_routes: true
+
+cfg_ciudades:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                CfgCiudades
+    module:               ciudades
+    prefix_path:          /ciudades
+    column:               id
+    with_wildcard_routes: true
+
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: default, action: index }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

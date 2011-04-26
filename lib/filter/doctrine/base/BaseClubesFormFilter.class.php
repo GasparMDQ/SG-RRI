@@ -20,7 +20,7 @@ abstract class BaseClubesFormFilter extends BaseFormFilterDoctrine
       'presidente_id' => new sfWidgetFormFilterInput(),
       'ciudad_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('CfgCiudades'), 'add_empty' => true)),
       'distrito_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Distritos'), 'add_empty' => true)),
-      'programa'      => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('CfgProgramas'), 'add_empty' => true)),
+      'programa_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('CfgProgramas'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
@@ -31,7 +31,7 @@ abstract class BaseClubesFormFilter extends BaseFormFilterDoctrine
       'presidente_id' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'ciudad_id'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('CfgCiudades'), 'column' => 'id')),
       'distrito_id'   => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Distritos'), 'column' => 'id')),
-      'programa'      => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('CfgProgramas'), 'column' => 'programa')),
+      'programa_id'   => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('CfgProgramas'), 'column' => 'id')),
     ));
 
     $this->widgetSchema->setNameFormat('clubes_filters[%s]');
@@ -59,7 +59,7 @@ abstract class BaseClubesFormFilter extends BaseFormFilterDoctrine
       'presidente_id' => 'Number',
       'ciudad_id'     => 'ForeignKey',
       'distrito_id'   => 'ForeignKey',
-      'programa'      => 'ForeignKey',
+      'programa_id'   => 'ForeignKey',
     );
   }
 }

@@ -9,20 +9,20 @@ Doctrine_Manager::getInstance()->bindComponent('ClubesReunion', 'doctrine');
  * 
  * @property integer $id
  * @property integer $club_id
- * @property string $dia
+ * @property integer $dia_id
  * @property time $hora
  * @property CfgDias $CfgDias
  * @property Clubes $Clubes
  * 
  * @method integer       getId()      Returns the current record's "id" value
  * @method integer       getClubId()  Returns the current record's "club_id" value
- * @method string        getDia()     Returns the current record's "dia" value
+ * @method integer       getDiaId()   Returns the current record's "dia_id" value
  * @method time          getHora()    Returns the current record's "hora" value
  * @method CfgDias       getCfgDias() Returns the current record's "CfgDias" value
  * @method Clubes        getClubes()  Returns the current record's "Clubes" value
  * @method ClubesReunion setId()      Sets the current record's "id" value
  * @method ClubesReunion setClubId()  Sets the current record's "club_id" value
- * @method ClubesReunion setDia()     Sets the current record's "dia" value
+ * @method ClubesReunion setDiaId()   Sets the current record's "dia_id" value
  * @method ClubesReunion setHora()    Sets the current record's "hora" value
  * @method ClubesReunion setCfgDias() Sets the current record's "CfgDias" value
  * @method ClubesReunion setClubes()  Sets the current record's "Clubes" value
@@ -52,14 +52,14 @@ abstract class BaseClubesReunion extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => 8,
              ));
-        $this->hasColumn('dia', 'string', 255, array(
-             'type' => 'string',
+        $this->hasColumn('dia_id', 'integer', 8, array(
+             'type' => 'integer',
              'fixed' => 0,
              'unsigned' => false,
              'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
-             'length' => 255,
+             'length' => 8,
              ));
         $this->hasColumn('hora', 'time', 25, array(
              'type' => 'time',
@@ -76,8 +76,8 @@ abstract class BaseClubesReunion extends sfDoctrineRecord
     {
         parent::setUp();
         $this->hasOne('CfgDias', array(
-             'local' => 'dia',
-             'foreign' => 'dia'));
+             'local' => 'dia_id',
+             'foreign' => 'id'));
 
         $this->hasOne('Clubes', array(
              'local' => 'club_id',

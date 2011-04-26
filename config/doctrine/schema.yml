@@ -102,16 +102,22 @@ CfgDias:
   connection: doctrine
   tableName: cfg_dias
   columns:
+    id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
     dia:
       type: string(255)
       fixed: false
       unsigned: false
-      primary: true
+      primary: false
       autoincrement: false
   relations:
     ClubesReunion:
-      local: dia
-      foreign: dia
+      local: id
+      foreign: dia_id
       type: many
 CfgPaises:
   connection: doctrine
@@ -139,11 +145,17 @@ CfgProgramas:
   connection: doctrine
   tableName: cfg_programas
   columns:
+    id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
     programa:
       type: string(255)
       fixed: false
       unsigned: false
-      primary: true
+      primary: false
       autoincrement: false
     logo:
       type: string(255)
@@ -154,8 +166,8 @@ CfgProgramas:
       autoincrement: false
   relations:
     Clubes:
-      local: programa
-      foreign: programa
+      local: id
+      foreign: programa_id
       type: many
 CfgProvincias:
   connection: doctrine
@@ -249,8 +261,8 @@ Clubes:
       primary: false
       notnull: true
       autoincrement: false
-    programa:
-      type: string(255)
+    programa_id:
+      type: integer(8)
       fixed: false
       unsigned: false
       primary: false
@@ -266,8 +278,8 @@ Clubes:
       foreign: id
       type: one
     CfgProgramas:
-      local: programa
-      foreign: programa
+      local: programa_id
+      foreign: id
       type: one
     ClubesAdmin:
       local: id
@@ -319,8 +331,8 @@ ClubesReunion:
       primary: false
       notnull: true
       autoincrement: false
-    dia:
-      type: string(255)
+    dia_id:
+      type: integer(8)
       fixed: false
       unsigned: false
       primary: false
@@ -335,8 +347,8 @@ ClubesReunion:
       autoincrement: false
   relations:
     CfgDias:
-      local: dia
-      foreign: dia
+      local: dia_id
+      foreign: id
       type: one
     Clubes:
       local: club_id

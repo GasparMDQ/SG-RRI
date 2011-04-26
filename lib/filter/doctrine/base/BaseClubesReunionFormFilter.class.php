@@ -14,13 +14,13 @@ abstract class BaseClubesReunionFormFilter extends BaseFormFilterDoctrine
   {
     $this->setWidgets(array(
       'club_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Clubes'), 'add_empty' => true)),
-      'dia'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('CfgDias'), 'add_empty' => true)),
+      'dia_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('CfgDias'), 'add_empty' => true)),
       'hora'    => new sfWidgetFormFilterInput(array('with_empty' => false)),
     ));
 
     $this->setValidators(array(
       'club_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Clubes'), 'column' => 'id')),
-      'dia'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('CfgDias'), 'column' => 'dia')),
+      'dia_id'  => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('CfgDias'), 'column' => 'id')),
       'hora'    => new sfValidatorPass(array('required' => false)),
     ));
 
@@ -43,7 +43,7 @@ abstract class BaseClubesReunionFormFilter extends BaseFormFilterDoctrine
     return array(
       'id'      => 'Number',
       'club_id' => 'ForeignKey',
-      'dia'     => 'ForeignKey',
+      'dia_id'  => 'ForeignKey',
       'hora'    => 'Text',
     );
   }

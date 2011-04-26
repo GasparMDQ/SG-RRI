@@ -15,7 +15,7 @@ Doctrine_Manager::getInstance()->bindComponent('Clubes', 'doctrine');
  * @property integer $presidente_id
  * @property integer $ciudad_id
  * @property integer $distrito_id
- * @property string $programa
+ * @property integer $programa_id
  * @property Distritos $Distritos
  * @property CfgCiudades $CfgCiudades
  * @property CfgProgramas $CfgProgramas
@@ -30,7 +30,7 @@ Doctrine_Manager::getInstance()->bindComponent('Clubes', 'doctrine');
  * @method integer             getPresidenteId()  Returns the current record's "presidente_id" value
  * @method integer             getCiudadId()      Returns the current record's "ciudad_id" value
  * @method integer             getDistritoId()    Returns the current record's "distrito_id" value
- * @method string              getPrograma()      Returns the current record's "programa" value
+ * @method integer             getProgramaId()    Returns the current record's "programa_id" value
  * @method Distritos           getDistritos()     Returns the current record's "Distritos" value
  * @method CfgCiudades         getCfgCiudades()   Returns the current record's "CfgCiudades" value
  * @method CfgProgramas        getCfgProgramas()  Returns the current record's "CfgProgramas" value
@@ -44,7 +44,7 @@ Doctrine_Manager::getInstance()->bindComponent('Clubes', 'doctrine');
  * @method Clubes              setPresidenteId()  Sets the current record's "presidente_id" value
  * @method Clubes              setCiudadId()      Sets the current record's "ciudad_id" value
  * @method Clubes              setDistritoId()    Sets the current record's "distrito_id" value
- * @method Clubes              setPrograma()      Sets the current record's "programa" value
+ * @method Clubes              setProgramaId()    Sets the current record's "programa_id" value
  * @method Clubes              setDistritos()     Sets the current record's "Distritos" value
  * @method Clubes              setCfgCiudades()   Sets the current record's "CfgCiudades" value
  * @method Clubes              setCfgProgramas()  Sets the current record's "CfgProgramas" value
@@ -132,14 +132,14 @@ abstract class BaseClubes extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => 8,
              ));
-        $this->hasColumn('programa', 'string', 255, array(
-             'type' => 'string',
+        $this->hasColumn('programa_id', 'integer', 8, array(
+             'type' => 'integer',
              'fixed' => 0,
              'unsigned' => false,
              'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
-             'length' => 255,
+             'length' => 8,
              ));
     }
 
@@ -155,8 +155,8 @@ abstract class BaseClubes extends sfDoctrineRecord
              'foreign' => 'id'));
 
         $this->hasOne('CfgProgramas', array(
-             'local' => 'programa',
-             'foreign' => 'programa'));
+             'local' => 'programa_id',
+             'foreign' => 'id'));
 
         $this->hasMany('ClubesAdmin', array(
              'local' => 'id',

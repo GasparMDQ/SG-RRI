@@ -15,12 +15,14 @@ abstract class BaseCfgProgramasForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'programa' => new sfWidgetFormInputHidden(),
+      'id'       => new sfWidgetFormInputHidden(),
+      'programa' => new sfWidgetFormInputText(),
       'logo'     => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
-      'programa' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('programa')), 'empty_value' => $this->getObject()->get('programa'), 'required' => false)),
+      'id'       => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'programa' => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'logo'     => new sfValidatorString(array('max_length' => 255, 'required' => false)),
     ));
 

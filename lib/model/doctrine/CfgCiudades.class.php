@@ -12,5 +12,9 @@
  */
 class CfgCiudades extends BaseCfgCiudades
 {
+  public function __toString()
+  {
+    return sprintf('%s', $this->getCiudad());
+  }
 
 }

@@ -13,9 +13,11 @@ abstract class BaseCfgDiasFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
+      'dia' => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
+      'dia' => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('cfg_dias_filters[%s]');
@@ -35,6 +37,7 @@ abstract class BaseCfgDiasFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
+      'id'  => 'Number',
       'dia' => 'Text',
     );
   }
