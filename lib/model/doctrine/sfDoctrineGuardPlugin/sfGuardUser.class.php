@@ -12,5 +12,9 @@
  */
 class sfGuardUser extends PluginsfGuardUser
 {
+  public function __toString()
+  {
+    return sprintf('%s %s', $this->getFirstName(), $this->getLastName());
+  }
 
 }

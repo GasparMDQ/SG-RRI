@@ -4,3 +4,5 @@ Thumbs.db
 databases.yml
 phpconf.bat
 cache/
+log/
+.log

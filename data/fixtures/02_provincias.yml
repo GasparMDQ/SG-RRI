@@ -1,0 +1,305 @@
+CfgProvincias:
+    1:
+        id: 1
+        pais_id: 1
+        provincia: "Buenos Aires"
+    2:
+        id: 2
+        pais_id: 1
+        provincia: "Cordoba"
+    3:
+        id: 3
+        pais_id: 1
+        provincia: "Santa Fe"
+    4:
+        id: 4
+        pais_id: 1
+        provincia: "Mendoza"
+    5:
+        id: 5
+        pais_id: 1
+        provincia: "Tucuman"
+    6:
+        id: 6
+        pais_id: 1
+        provincia: "Entre Rios"
+    7:
+        id: 7
+        pais_id: 1
+        provincia: "Salta"
+    8:
+        id: 8
+        pais_id: 1
+        provincia: "Misiones"
+    9:
+        id: 9
+        pais_id: 1
+        provincia: "Chaco"
+    10:
+        id: 10
+        pais_id: 1
+        provincia: "Corrientes"
+    11:
+        id: 11
+        pais_id: 1
+        provincia: "Santiago del Estero"
+    12:
+        id: 12
+        pais_id: 1
+        provincia: "Jujuy"
+    13:
+        id: 13
+        pais_id: 1
+        provincia: "San Juan"
+    14:
+        id: 14
+        pais_id: 1
+        provincia: "Rio Negro"
+    15:
+        id: 15
+        pais_id: 1
+        provincia: "Formosa"
+    16:
+        id: 16
+        pais_id: 1
+        provincia: "Neuquen"
+    17:
+        id: 17
+        pais_id: 1
+        provincia: "Chubut"
+    18:
+        id: 18
+        pais_id: 1
+        provincia: "San Luis"
+    19:
+        id: 19
+        pais_id: 1
+        provincia: "Catamarca"
+    20:
+        id: 20
+        pais_id: 1
+        provincia: "La Rioja"
+    21:
+        id: 21
+        pais_id: 1
+        provincia: "La Pampa"
+    22:
+        id: 22
+        pais_id: 1
+        provincia: "Santa Cruz"
+    23:
+        id: 23
+        pais_id: 1
+        provincia: "Tierra del Fuego"
+    24:
+        id: 24
+        pais_id: 3
+        provincia: "Montevideo"
+    25:
+        id: 25
+        pais_id: 3
+        provincia: "Flores"
+    26:
+        id: 26
+        pais_id: 3
+        provincia: "Colonia"
+    27:
+        id: 27
+        pais_id: 3
+        provincia: "Florida"
+    28:
+        id: 28
+        pais_id: 3
+        provincia: "Maldonado"
+    29:
+        id: 29
+        pais_id: 3
+        provincia: "Durazno"
+    30:
+        id: 30
+        pais_id: 3
+        provincia: "Rocha"
+    31:
+        id: 31
+        pais_id: 3
+        provincia: "Rio Negro"
+    32:
+        id: 32
+        pais_id: 3
+        provincia: "Lavalleja"
+    33:
+        id: 33
+        pais_id: 3
+        provincia: "Soriano"
+    34:
+        id: 34
+        pais_id: 3
+        provincia: "Paysandu"
+    35:
+        id: 35
+        pais_id: 3
+        provincia: "Tacuarembo"
+    36:
+        id: 36
+        pais_id: 3
+        provincia: "Salto"
+    37:
+        id: 37
+        pais_id: 3
+        provincia: "Treinta y Tres"
+    38:
+        id: 38
+        pais_id: 3
+        provincia: "Cerro Lago"
+    39:
+        id: 39
+        pais_id: 3
+        provincia: "Artigas"
+    40:
+        id: 40
+        pais_id: 3
+        provincia: "San Jose"
+    41:
+        id: 41
+        pais_id: 3
+        provincia: "Rivera"
+    42:
+        id: 42
+        pais_id: 3
+        provincia: "Canelones"
+    43:
+        id: 43
+        pais_id: 1
+        provincia: "CABA"
+    44:
+        id: 44
+        pais_id: 2
+        provincia: "Asuncion"
+    45:
+        id: 45
+        pais_id: 2
+        provincia: "Concepcion"
+    46:
+        id: 46
+        pais_id: 2
+        provincia: "San Pedro"
+    47:
+        id: 47
+        pais_id: 2
+        provincia: "Cordillera"
+    48:
+        id: 48
+        pais_id: 2
+        provincia: "Guaira"
+    49:
+        id: 49
+        pais_id: 2
+        provincia: "Caaguazu"
+    50:
+        id: 50
+        pais_id: 2
+        provincia: "Caazapa"
+    51:
+        id: 51
+        pais_id: 2
+        provincia: "Itapua"
+    52:
+        id: 52
+        pais_id: 2
+        provincia: "Misiones"
+    53:
+        id: 53
+        pais_id: 2
+        provincia: "Paraguari"
+    54:
+        id: 54
+        pais_id: 2
+        provincia: "Alto Parana"
+    55:
+        id: 55
+        pais_id: 2
+        provincia: "Central"
+    56:
+        id: 56
+        pais_id: 2
+        provincia: "Ntilde;eembucu"
+    57:
+        id: 57
+        pais_id: 2
+        provincia: "Amambay"
+    58:
+        id: 58
+        pais_id: 2
+        provincia: "Canindeyu"
+    59:
+        id: 59
+        pais_id: 2
+        provincia: "Presidente Hayes"
+    60:
+        id: 60
+        pais_id: 2
+        provincia: "Alto Paraguay"
+    61:
+        id: 61
+        pais_id: 2
+        provincia: "Boqueron"
+    63:
+        id: 63
+        pais_id: 8
+        provincia: "Chuquisaca"
+    64:
+        id: 64
+        pais_id: 8
+        provincia: "Cochabamba"
+    66:
+        id: 66
+        pais_id: 8
+        provincia: "Oruro"
+    67:
+        id: 67
+        pais_id: 8
+        provincia: "Pando"
+    68:
+        id: 68
+        pais_id: 8
+        provincia: "Potosi"
+    69:
+        id: 69
+        pais_id: 8
+        provincia: "Santa Cruz"
+    70:
+        id: 70
+        pais_id: 8
+        provincia: "Tarija"
+    73:
+        id: 73
+        pais_id: 8
+        provincia: "Beni"
+    75:
+        id: 75
+        pais_id: 8
+        provincia: "La Paz"
+    88:
+        id: 88
+        pais_id: 7
+        provincia: "Lima"
+    89:
+        id: 89
+        pais_id: 15
+        provincia: "Merida"
+    90:
+        id: 90
+        pais_id: 6
+        provincia: "Distrito Federal"
+    91:
+        id: 91
+        pais_id: 16
+        provincia: "Berl$in"
+    92:
+        id: 92
+        pais_id: 6
+        provincia: "Tlaxcala"
+    93:
+        id: 93
+        pais_id: 6
+        provincia: "Puebla"
