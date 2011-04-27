@@ -3,5 +3,5 @@
 
 require_once(dirname(__FILE__).'/../config/ProjectConfiguration.class.php');
 
-$configuration = ProjectConfiguration::getApplicationConfiguration('clubes', 'prod', false);
+$configuration = ProjectConfiguration::getApplicationConfiguration('informes', 'prod', false);
 sfContext::createInstance($configuration)->dispatch();

@@ -1,38 +1,38 @@
 <?php
 
 /**
- * club actions.
+ * aims actions.
  *
  * @package    base_de_datos
- * @subpackage club
+ * @subpackage aims
  * @author     Your name here
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class clubActions extends sfActions
+class aimsActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->clubess = Doctrine_Core::getTable('Clubes')
+    $this->aimss = Doctrine_Core::getTable('Aims')
       ->createQuery('a')
       ->execute();
   }
 
   public function executeShow(sfWebRequest $request)
   {
-    $this->clubes = Doctrine_Core::getTable('Clubes')->find(array($request->getParameter('id')));
-    $this->forward404Unless($this->clubes);
+    $this->aims = Doctrine_Core::getTable('Aims')->find(array($request->getParameter('id')));
+    $this->forward404Unless($this->aims);
   }
 
   public function executeNew(sfWebRequest $request)
   {
-    $this->form = new ClubesForm();
+    $this->form = new AimsForm();
   }
 
   public function executeCreate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST));
 
-    $this->form = new ClubesForm();
+    $this->form = new AimsForm();
 
     $this->processForm($request, $this->form);
 
@@ -41,15 +41,15 @@ class clubActions extends sfActions
 
   public function executeEdit(sfWebRequest $request)
   {
-    $this->forward404Unless($clubes = Doctrine_Core::getTable('Clubes')->find(array($request->getParameter('id'))), sprintf('Object clubes does not exist (%s).', $request->getParameter('id')));
-    $this->form = new ClubesForm($clubes);
+    $this->forward404Unless($aims = Doctrine_Core::getTable('Aims')->find(array($request->getParameter('id'))), sprintf('Object aims does not exist (%s).', $request->getParameter('id')));
+    $this->form = new AimsForm($aims);
   }
 
   public function executeUpdate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
-    $this->forward404Unless($clubes = Doctrine_Core::getTable('Clubes')->find(array($request->getParameter('id'))), sprintf('Object clubes does not exist (%s).', $request->getParameter('id')));
-    $this->form = new ClubesForm($clubes);
+    $this->forward404Unless($aims = Doctrine_Core::getTable('Aims')->find(array($request->getParameter('id'))), sprintf('Object aims does not exist (%s).', $request->getParameter('id')));
+    $this->form = new AimsForm($aims);
 
     $this->processForm($request, $this->form);
 
@@ -60,10 +60,10 @@ class clubActions extends sfActions
   {
     $request->checkCSRFProtection();
 
-    $this->forward404Unless($clubes = Doctrine_Core::getTable('Clubes')->find(array($request->getParameter('id'))), sprintf('Object clubes does not exist (%s).', $request->getParameter('id')));
-    $clubes->delete();
+    $this->forward404Unless($aims = Doctrine_Core::getTable('Aims')->find(array($request->getParameter('id'))), sprintf('Object aims does not exist (%s).', $request->getParameter('id')));
+    $aims->delete();
 
-    $this->redirect('club/index');
+    $this->redirect('aims/index');
   }
 
   protected function processForm(sfWebRequest $request, sfForm $form)
@@ -71,9 +71,9 @@ class clubActions extends sfActions
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
     if ($form->isValid())
     {
-      $clubes = $form->save();
+      $aims = $form->save();
 
-      $this->redirect('club/edit?id='.$clubes->getId());
+      $this->redirect('aims/edit?id='.$aims->getId());
     }
   }
 }

@@ -34,13 +34,13 @@
     </tr>
     <tr>
       <th>Programa:</th>
-      <td><?php echo $clubes->getPrograma() ?></td>
+      <td><?php echo $clubes->getProgramaId() ?></td>
     </tr>
   </tbody>
 </table>
 
 <hr />
 
-<a href="<?php echo url_for('club/edit?id='.$clubes->getId()) ?>">Edit</a>
+<a href="<?php echo url_for('clubes/edit?id='.$clubes->getId()) ?>">Edit</a>
 &nbsp;
-<a href="<?php echo url_for('club/index') ?>">List</a>
+<a href="<?php echo url_for('clubes/index') ?>">List</a>
