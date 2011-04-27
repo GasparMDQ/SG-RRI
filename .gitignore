@@ -6,3 +6,5 @@ phpconf.bat
 cache/
 log/
 .log
+
+/index.php
