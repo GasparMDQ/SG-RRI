@@ -1,0 +1,12 @@
+# # Populate this file with data to be loaded by your ORM's *:data-load task.
+SfGuardUser:
+  admin:
+    username: admin
+    salt: ed15b669e840bbfc23d86992a920c6e2
+    password: 123456
+    first_name:     Administrador
+    email_address:    admin@admin.com
+    is_super_admin: true
+    is_active: true
+    algorithm: sha1
+    

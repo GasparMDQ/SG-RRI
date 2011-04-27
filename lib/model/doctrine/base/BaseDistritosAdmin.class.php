@@ -24,9 +24,9 @@ Doctrine_Manager::getInstance()->bindComponent('DistritosAdmin', 'doctrine');
  * @method DistritosAdmin setDistritos()   Sets the current record's "Distritos" value
  * @method DistritosAdmin setSfGuardUser() Sets the current record's "sfGuardUser" value
  * 
- * @package    base_de_datos
+ * @package    Sistema de Gestion - Rotaract Rotary e Interact
  * @subpackage model
- * @author     Your name here
+ * @author     Gaspar Zaragoza
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BaseDistritosAdmin extends sfDoctrineRecord

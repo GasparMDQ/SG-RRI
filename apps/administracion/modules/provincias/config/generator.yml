@@ -14,7 +14,8 @@ generator:
     config:
       actions: ~
       fields:  ~
-      list:    ~
+      list:
+        sort: pais_id, provincia
       filter:  ~
       form:    ~
       edit:    ~

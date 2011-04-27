@@ -27,9 +27,9 @@ Doctrine_Manager::getInstance()->bindComponent('ClubesReunion', 'doctrine');
  * @method ClubesReunion setCfgDias() Sets the current record's "CfgDias" value
  * @method ClubesReunion setClubes()  Sets the current record's "Clubes" value
  * 
- * @package    base_de_datos
+ * @package    Sistema de Gestion - Rotaract Rotary e Interact
  * @subpackage model
- * @author     Your name here
+ * @author     Gaspar Zaragoza
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BaseClubesReunion extends sfDoctrineRecord

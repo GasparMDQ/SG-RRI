@@ -18,9 +18,9 @@ Doctrine_Manager::getInstance()->bindComponent('CfgPaises', 'doctrine');
  * @method CfgPaises           setPais()          Sets the current record's "pais" value
  * @method CfgPaises           setCfgProvincias() Sets the current record's "CfgProvincias" collection
  * 
- * @package    base_de_datos
+ * @package    Sistema de Gestion - Rotaract Rotary e Interact
  * @subpackage model
- * @author     Your name here
+ * @author     Gaspar Zaragoza
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BaseCfgPaises extends sfDoctrineRecord

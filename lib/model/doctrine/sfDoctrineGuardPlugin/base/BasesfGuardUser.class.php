@@ -73,9 +73,9 @@
  * @method sfGuardUser           setDistritos()             Sets the current record's "Distritos" collection
  * @method sfGuardUser           setDistritosAdmin()        Sets the current record's "DistritosAdmin" collection
  * 
- * @package    base_de_datos
+ * @package    Sistema de Gestion - Rotaract Rotary e Interact
  * @subpackage model
- * @author     Your name here
+ * @author     Gaspar Zaragoza
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BasesfGuardUser extends sfDoctrineRecord

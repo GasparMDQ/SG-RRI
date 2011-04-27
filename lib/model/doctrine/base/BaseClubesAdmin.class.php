@@ -24,9 +24,9 @@ Doctrine_Manager::getInstance()->bindComponent('ClubesAdmin', 'doctrine');
  * @method ClubesAdmin setClubes()      Sets the current record's "Clubes" value
  * @method ClubesAdmin setSfGuardUser() Sets the current record's "sfGuardUser" value
  * 
- * @package    base_de_datos
+ * @package    Sistema de Gestion - Rotaract Rotary e Interact
  * @subpackage model
- * @author     Your name here
+ * @author     Gaspar Zaragoza
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BaseClubesAdmin extends sfDoctrineRecord
