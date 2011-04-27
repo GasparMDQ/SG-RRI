@@ -1,0 +1,22 @@
+CfgDias:
+    Lunes:
+        id:     1
+        dia:   lunes
+    Martes:
+        id:     2
+        dia:   martes
+    Miercoles:
+        id:     3
+        dia:   miercoles
+    Jueves:
+        id:     4
+        dia:   jueves
+    Viernes:
+        id:     5
+        dia:   viernes
+    Sabado:
+        id:     6
+        dia:   sabado
+    Domingo:
+        id:     7
+        dia:   domingo

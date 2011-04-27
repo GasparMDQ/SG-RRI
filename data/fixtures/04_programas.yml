@@ -1,0 +1,16 @@
+CfgProgramas:
+    Rotaract:
+        id:     1
+        programa:   Rotaract
+    Rotary:
+        id:     2
+        programa:   Rotary
+    Interact:
+        id:     3
+        programa:   Interact
+    YEP:
+        id:     6
+        programa:   YEP
+    IGE:
+        id:     7
+        programa:   IGE
