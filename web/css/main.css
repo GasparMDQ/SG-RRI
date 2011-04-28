@@ -1,0 +1,243 @@
+/*
+Reset CSS
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.6.0
+*/
+html{color:#000;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}del,ins{text-decoration:none;}
+
+/*
+Fonts CSS
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.6.0
+*/
+body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}select,input,button,textarea{font:99% arial,helvetica,clean,sans-serif;outline: none;}table{font-size:inherit;font:100%;}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+
+a
+{
+  color: #524F46;
+  outline: none;
+}
+
+body
+{
+  font: 14px "Lucida Grande", Lucida, Verdana, sans-serif;
+  background-color: #828f95;
+}
+
+#container
+{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 0px 5px;
+  background-color: white;
+/*  background: #fff url(../images/bg-page.png) bottom repeat-x; */
+}
+
+#header
+{
+  width: 100%;
+}
+
+#sub_header
+{
+/*  background: url(../images/bg-subheader.gif) bottom; */
+  width: 100%;
+  height: 2em;
+  margin: 0 auto;
+}
+
+#sub_header h2
+{
+  text-indent: -9999px;
+}
+
+#content .content {
+  width: 98%;
+  margin: 0 auto;
+}
+
+#content h1
+{
+  margin-top: 10px;
+  margin-bottom: 1px;
+  padding: 0px 15px;
+  font-size: 124%;
+  text-transform: uppercase;
+/*  background: url(../images/bg-listheader.gif) no-repeat; */
+  line-height: 32px;
+  color: #fff;
+}
+
+#content h1 a
+{
+  color: #fff;
+  text-decoration: none;
+  font-style: normal;
+  text-transform: uppercase;
+  line-height: 32px;
+}
+
+#footer
+{
+  margin-top: 60px;
+  font-size: 90%;
+  margin-bottom: 0px;
+  height: 153px;
+/*  background: url(../images/bg-footer.jpg) repeat-x bottom; */
+  padding-top: 10px;
+  position: relative;
+}
+
+#footer .content {
+  width: 98%;
+  margin: 0 auto;
+}
+
+#footer a
+{
+  color: #77766F;
+}
+
+#footer ul
+{
+  display: inline;
+}
+
+#footer li
+{
+  list-style: none;
+  margin-right: 15px;
+  display: inline;
+}
+
+#footer li a
+{
+  text-decoration: none;
+}
+
+#footer li a:hover
+{
+  color: #000;
+  text-decoration: underline;
+}
+
+#footer .symfony,
+#footer .centresource
+{
+  font-family: arial,sans-serif;
+  font-size: 80%;
+  float: right;
+  color: #666;
+}
+
+#footer .centresource
+{
+  clear: both;
+  margin-top: 5px;
+  padding-bottom: 10px;
+  position: absolute;
+  bottom: -30px;
+  right: 5%;
+  color: #adbcc3;
+  font-size: 90%;
+}
+
+#footer .centresource a
+{
+  color: #b2c0c6;
+  text-decoration: none;
+}
+
+#footer .centresource a:hover
+{
+  color: #fff;
+}
+
+
+#footer form {
+  margin: 10px 0;
+  color: #5f6364;
+}
+
+.error_list
+{
+  color: red;
+}
+
+strong
+{
+  font-weight: bold;
+}
+
+em
+{
+  font-style: italic;
+}
+
+.flash_notice
+{
+  margin: 3px 0;
+  padding: 7px;
+  background-color: #cfc;
+}
+
+.flash_error
+{
+  margin: 3px 0;
+  padding: 7px;
+  background-color: #f33;
+  color: #fff;
+}
+
+.menu {
+	float: left;
+	text-align:left;
+	margin: 0;
+}
+.menu  ul {
+	padding: 3px;
+	margin: 0;
+}
+.menu  li {
+	text-align: center;
+	padding: 0px;
+	margin: 0;
+	display: inline;
+}
+.menu  a {
+	color: black;
+	text-decoration: underline;
+	font-weight: bold;
+	font-size: x-small;
+}
+
+.acceso {
+	float: right;
+	text-align:right;
+	margin: 0;
+}
+.acceso  ul {
+	padding: 3px;
+	margin: 0;
+}
+.acceso  li {
+	text-align: center;
+	padding: 0px;
+	margin: 0;
+	display: inline;
+}
+.acceso  a {
+	color: black;
+	text-decoration: underline;
+	font-weight: bold;
+	font-size: x-small;
+}
+
+.last {
+    clear: both;
+}
