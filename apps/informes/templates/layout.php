@@ -37,7 +37,7 @@
 <?php else: ?>
 <!-- default -->
                 <ul>
-                    <li><a href="<?php echo url_for('informes/eventos') ?>">Ingresar</a></li>
+                    <li><?php echo link_to('Ingresar', 'sf_guard_signin') ?></li>
                     <li class="last"><a href="<?php echo url_for('registracion/index') ?>">Registrarse</a></li>
                 </ul>
 <?php endif ?>

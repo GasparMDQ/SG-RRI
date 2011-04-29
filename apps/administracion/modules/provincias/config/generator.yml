@@ -15,7 +15,11 @@ generator:
       actions: ~
       fields:  ~
       list:
-        sort: pais_id, provincia
+        fields:
+            cfg_paises: {label: "Pais"}
+        title:      Administracion de Paises
+        display:    [provincia, cfg_paises]
+        sort:       pais_id, provincia
       filter:  ~
       form:    ~
       edit:    ~
