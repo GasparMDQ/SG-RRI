@@ -14,7 +14,7 @@
             <div class="menu">
                 <ul>
                     <li><a href="<?php echo url_for('eventos/index') ?>">Inscripciones</a></li>
-                    <li><a href="<?php echo url_for('clubes/index') ?>">Clubes</a></li>
+                    <li><?php echo link_to('Clubes', 'clubes') ?></li>
                     <li><a href="<?php echo url_for('distritos/index') ?>">Distritos</a></li>
                     <li class="last"><a href="<?php echo url_for('reportes/index') ?>">Reportes</a></li>
                 </ul>
@@ -32,7 +32,7 @@
                     <li>user email</li>
                     <li><a href="<?php echo url_for('informes/eventos') ?>">Administracion (#)</a></li>
                     <li><a href="<?php echo url_for('informes/eventos') ?>">Perfil</a></li>
-                    <li class="last"><a href="<?php echo url_for('informes/reportes') ?>">Salir</a></li>
+                    <li class="last"><?php echo link_to('Salir', 'sf_guard_signout') ?></li>
                 </ul>
 <?php else: ?>
 <!-- default -->
