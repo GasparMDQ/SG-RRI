@@ -185,7 +185,7 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
 
         $this->hasMany('Distritos', array(
              'local' => 'id',
-             'foreign' => 'rdr_id'));
+             'foreign' => 'gd_id'));
 
         $this->hasMany('DistritosAdmin', array(
              'local' => 'id',

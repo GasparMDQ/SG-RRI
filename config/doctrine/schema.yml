@@ -391,12 +391,26 @@ Distritos:
       primary: false
       notnull: true
       autoincrement: false
+    gd_id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
     rdr_id:
       type: integer(8)
       fixed: false
       unsigned: false
       primary: false
-      notnull: true
+      notnull: false
+      autoincrement: false
+    rdi_id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
       autoincrement: false
     aim_id:
       type: integer(8)
@@ -419,10 +433,20 @@ Distritos:
       foreign: distrito_id
       type: many
     sfGuardUser:
+      local: gd_id
+      foreign: id
+      type: one
+    sfGuardUser_1:
+      class: sfGuardUser
       local: rdr_id
       foreign: id
       type: one
-
+    sfGuardUser_2:
+      class: sfGuardUser
+      local: rdi_id
+      foreign: id
+      type: one
+ 
 DistritosAdmin:
   connection: doctrine
   tableName: distritos_admin

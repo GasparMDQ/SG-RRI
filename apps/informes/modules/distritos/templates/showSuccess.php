@@ -9,8 +9,16 @@
       <td><?php echo $distritos->getDistrito() ?></td>
     </tr>
     <tr>
+      <th>Gd:</th>
+      <td><?php echo $distritos->getGdId() ?></td>
+    </tr>
+    <tr>
       <th>Rdr:</th>
       <td><?php echo $distritos->getRdrId() ?></td>
+    </tr>
+    <tr>
+      <th>Rdi:</th>
+      <td><?php echo $distritos->getRdiId() ?></td>
     </tr>
     <tr>
       <th>Aim:</th>
