@@ -21,6 +21,7 @@
  * @property Doctrine_Collection $sfGuardUserGroup
  * @property sfGuardRememberKey $RememberKeys
  * @property sfGuardForgotPassword $ForgotPassword
+ * @property sfGuardUserProfile $Profile
  * @property Doctrine_Collection $Aims
  * @property Doctrine_Collection $AimsAdmin
  * @property Doctrine_Collection $Clubes
@@ -44,6 +45,7 @@
  * @method Doctrine_Collection   getSfGuardUserGroup()      Returns the current record's "sfGuardUserGroup" collection
  * @method sfGuardRememberKey    getRememberKeys()          Returns the current record's "RememberKeys" value
  * @method sfGuardForgotPassword getForgotPassword()        Returns the current record's "ForgotPassword" value
+ * @method sfGuardUserProfile    getProfile()               Returns the current record's "Profile" value
  * @method Doctrine_Collection   getAims()                  Returns the current record's "Aims" collection
  * @method Doctrine_Collection   getAimsAdmin()             Returns the current record's "AimsAdmin" collection
  * @method Doctrine_Collection   getClubes()                Returns the current record's "Clubes" collection
@@ -66,6 +68,7 @@
  * @method sfGuardUser           setSfGuardUserGroup()      Sets the current record's "sfGuardUserGroup" collection
  * @method sfGuardUser           setRememberKeys()          Sets the current record's "RememberKeys" value
  * @method sfGuardUser           setForgotPassword()        Sets the current record's "ForgotPassword" value
+ * @method sfGuardUser           setProfile()               Sets the current record's "Profile" value
  * @method sfGuardUser           setAims()                  Sets the current record's "Aims" collection
  * @method sfGuardUser           setAimsAdmin()             Sets the current record's "AimsAdmin" collection
  * @method sfGuardUser           setClubes()                Sets the current record's "Clubes" collection
@@ -164,6 +167,10 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'foreign' => 'user_id'));
 
         $this->hasOne('sfGuardForgotPassword as ForgotPassword', array(
+             'local' => 'id',
+             'foreign' => 'user_id'));
+
+        $this->hasOne('sfGuardUserProfile as Profile', array(
              'local' => 'id',
              'foreign' => 'user_id'));
 

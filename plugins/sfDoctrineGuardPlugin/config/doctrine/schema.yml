@@ -180,3 +180,4 @@ sfGuardForgotPassword:
       foreignType: one
       foreignAlias: ForgotPassword
       onDelete: CASCADE
+      

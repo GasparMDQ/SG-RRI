@@ -44,6 +44,12 @@
 		  <li>
 			<?php echo link_to('Usuarios', 'sf_guard_user') ?>
 		  </li>
+		  <li>
+			<?php echo link_to('Grupos', 'sf_guard_group') ?>
+		  </li>
+		  <li>
+			<?php echo link_to('Permisos', 'sf_guard_permission') ?>
+		  </li>
 		  </ul>
       </div>
  <?php endif ?>

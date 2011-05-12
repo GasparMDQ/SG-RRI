@@ -1,3 +1,31 @@
+sfGuardUserProfile:
+  columns:
+    id:
+      type: integer(8)
+      primary: true
+      autoincrement: true
+    user_id:
+      type: integer(8)
+    apodo:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    fecha_nacimiento:
+      type: date
+      notnull: false
+  relations:
+    User:
+      class: sfGuardUser
+      local: user_id
+      foreign: id
+      type: one
+      foreignType: one
+      foreignAlias: Profile
+      onDelete: CASCADE
+      
 Aims:
   connection: doctrine
   tableName: aims
