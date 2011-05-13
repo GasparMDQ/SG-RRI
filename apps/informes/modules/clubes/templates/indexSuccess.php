@@ -17,9 +17,9 @@
       <td><a href="<?php echo url_for('clubes/show?id='.$clubes->getId()) ?>"><?php echo $clubes->getClub() ?></a></td>
       <td><?php echo $clubes->getEmail() ?></td>
       <td><?php echo $clubes->getUrl() ?></td>
-      <td><?php echo $clubes->getCiudadId() ?></td>
-      <td><?php echo $clubes->getDistritoId() ?></td>
-      <td><?php echo $clubes->getPrograma() ?></td>
+      <td><?php echo $clubes->getCfgCiudades()->getCiudad() ?></td>
+      <td><?php echo $clubes->getDistritos()->getDistrito() ?></td>
+      <td><?php echo $clubes->getCfgProgramas()->getPrograma() ?></td>
     </tr>
     <?php endforeach; ?>
   </tbody>

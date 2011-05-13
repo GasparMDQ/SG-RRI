@@ -149,3 +149,609 @@ clubes:
         club: "Punta Alta"
         distrito_id: 10
         programa_id: 1
+    32:
+        id: 32
+        club: "Villa Regina"
+        distrito_id: 10
+        programa_id: 1
+    33:
+        id: 33
+        club: "Caleta Olivia"
+        distrito_id: 10
+        programa_id: 1
+    34:
+        id: 34
+        club: "Comodoro Rivadavia"
+        distrito_id: 10
+        programa_id: 1
+    35:
+        id: 35
+        club: "Cipolleti Comahue"
+        distrito_id: 10
+        programa_id: 1
+    36:
+        id: 36
+        club: "Rawson"
+        distrito_id: 10
+        programa_id: 1
+    37:
+        id: 37
+        club: "Parana"
+        distrito_id: 11
+        programa_id: 1
+    38:
+        id: 38
+        club: "Salto Grande Concordia"
+        distrito_id: 11
+        programa_id: 1
+    39:
+        id: 39
+        club: "Rosario Sud"
+        distrito_id: 11
+        programa_id: 1
+    40:
+        id: 40
+        club: "Salto"
+        distrito_id: 11
+        programa_id: 1
+    41:
+        id: 41
+        club: "Rosario Plaza de la Bandera"
+        distrito_id: 11
+        programa_id: 1
+    43:
+        id: 43
+        club: "San Lorenzo"
+        distrito_id: 11
+        programa_id: 1
+    44:
+        id: 44
+        club: "Venado Tuerto Cincuentenario"
+        distrito_id: 11
+        programa_id: 1
+    45:
+        id: 45
+        club: "Rosario Oeste"
+        distrito_id: 11
+        programa_id: 1
+    46:
+        id: 46
+        club: "Armstrong"
+        distrito_id: 11
+        programa_id: 1
+    47:
+        id: 47
+        club: "Atahualpa - Parque Posadas"
+        distrito_id: 12
+        programa_id: 1
+    48:
+        id: 48
+        club: "Tranqueras"
+        distrito_id: 12
+        programa_id: 1
+    49:
+        id: 49
+        club: "Carmelo"
+        distrito_id: 12
+        programa_id: 1
+    50:
+        id: 50
+        club: "Las Piedras"
+        distrito_id: 12
+        programa_id: 1
+    51:
+        id: 51
+        club: "Tala"
+        distrito_id: 13
+        programa_id: 1
+    53:
+        id: 53
+        club: "Malvin"
+        distrito_id: 13
+        programa_id: 1
+    54:
+        id: 54
+        club: "Parque Rodo - Punta Carretas - Pocitos"
+        distrito_id: 13
+        programa_id: 1
+    55:
+        id: 55
+        club: "Maldonado Este"
+        distrito_id: 13
+        programa_id: 1
+    56:
+        id: 56
+        club: "Montevideo"
+        distrito_id: 13
+        programa_id: 1
+    57:
+        id: 57
+        club: "Cordoba"
+        distrito_id: 1
+        programa_id: 1
+    58:
+        id: 58
+        club: "Villa Maria Karmi"
+        distrito_id: 1
+        programa_id: 1
+    59:
+        id: 59
+        club: "Rio Tercero"
+        distrito_id: 1
+        programa_id: 1
+    60:
+        id: 60
+        club: "Pueyrredon"
+        distrito_id: 1
+        programa_id: 1
+    61:
+        id: 61
+        club: "Villa Maria"
+        distrito_id: 1
+        programa_id: 1
+    62:
+        id: 62
+        club: "Villa Carlos Paz"
+        distrito_id: 1
+        programa_id: 1
+    63:
+        id: 63
+        club: "Alberdi"
+        distrito_id: 1
+        programa_id: 1
+    64:
+        id: 64
+        club: "Cerro de las Rosas"
+        distrito_id: 1
+        programa_id: 1
+    65:
+        id: 65
+        club: "Chamical"
+        distrito_id: 1
+        programa_id: 1
+    66:
+        id: 66
+        club: "General Paz"
+        distrito_id: 1
+        programa_id: 1
+    67:
+        id: 67
+        club: "La Rioja"
+        distrito_id: 1
+        programa_id: 1
+    68:
+        id: 68
+        club: "Maipu"
+        distrito_id: 1
+        programa_id: 1
+    69:
+        id: 69
+        club: "Plaza Espana"
+        distrito_id: 1
+        programa_id: 1
+    72:
+        id: 72
+        club: "Villa Adelina"
+        distrito_id: 2
+        programa_id: 1
+    73:
+        id: 73
+        club: "San Isidro"
+        distrito_id: 2
+        programa_id: 1
+    74:
+        id: 74
+        club: "Carapachay"
+        distrito_id: 2
+        programa_id: 1
+    75:
+        id: 75
+        club: "San Nicolas"
+        distrito_id: 2
+        programa_id: 1
+    77:
+        id: 77
+        club: "Grand Bourg"
+        distrito_id: 2
+        programa_id: 1
+    78:
+        id: 78
+        club: "Tigre"
+        distrito_id: 2
+        programa_id: 1
+    79:
+        id: 79
+        club: "Florida"
+        distrito_id: 2
+        programa_id: 1
+    80:
+        id: 80
+        club: "Rafaela"
+        distrito_id: 3
+        programa_id: 1
+    81:
+        id: 81
+        club: "Tafi Viejo"
+        distrito_id: 3
+        programa_id: 1
+    82:
+        id: 82
+        club: "San Justo"
+        distrito_id: 3
+        programa_id: 1
+    83:
+        id: 83
+        club: "Santa Fe Noroeste"
+        distrito_id: 3
+        programa_id: 1
+    84:
+        id: 84
+        club: "Tucuman"
+        distrito_id: 3
+        programa_id: 1
+    85:
+        id: 85
+        club: "Tucuman 9 de Julio"
+        distrito_id: 3
+        programa_id: 1
+    86:
+        id: 86
+        club: "Esperanza"
+        distrito_id: 3
+        programa_id: 1
+    87:
+        id: 87
+        club: "Maria Susana"
+        distrito_id: 3
+        programa_id: 1
+    88:
+        id: 88
+        club: "Santa Fe Sur"
+        distrito_id: 3
+        programa_id: 1
+    89:
+        id: 89
+        club: "Santa Fe"
+        distrito_id: 3
+        programa_id: 1
+    90:
+        id: 90
+        club: "Santiago del Estero Huarmi"
+        distrito_id: 3
+        programa_id: 1
+    91:
+        id: 91
+        club: "San Vicente"
+        distrito_id: 3
+        programa_id: 1
+    92:
+        id: 92
+        club: "Ceres"
+        distrito_id: 3
+        programa_id: 1
+    93:
+        id: 93
+        club: "Encarnacion"
+        distrito_id: 4
+        programa_id: 1
+    94:
+        id: 94
+        club: "Posadas Villa Lanus"
+        distrito_id: 4
+        programa_id: 1
+    95:
+        id: 95
+        club: "Sin Fronteras"
+        distrito_id: 4
+        programa_id: 1
+    96:
+        id: 96
+        club: "Resistencia"
+        distrito_id: 4
+        programa_id: 1
+    97:
+        id: 97
+        club: "Asuncion Catedral"
+        distrito_id: 4
+        programa_id: 1
+    98:
+        id: 98
+        club: "Resistencia Sur"
+        distrito_id: 4
+        programa_id: 1
+    99:
+        id: 99
+        club: "Posadas Norte"
+        distrito_id: 4
+        programa_id: 1
+    100:
+        id: 100
+        club: "Encarnacion Norte"
+        distrito_id: 4
+        programa_id: 1
+    101:
+        id: 101
+        club: "Clorinda"
+        distrito_id: 4
+        programa_id: 1
+    102:
+        id: 102
+        club: "Mercedes"
+        distrito_id: 4
+        programa_id: 1
+    103:
+        id: 103
+        club: "Luque"
+        distrito_id: 4
+        programa_id: 1
+    104:
+        id: 104
+        club: "Asuncion Trinidad"
+        distrito_id: 4
+        programa_id: 1
+    105:
+        id: 105
+        club: "Corrientes Costanera"
+        distrito_id: 4
+        programa_id: 1
+    106:
+        id: 106
+        club: "Curuzu Cuatia"
+        distrito_id: 4
+        programa_id: 1
+    107:
+        id: 107
+        club: "Posadas Oeste"
+        distrito_id: 4
+        programa_id: 1
+    108:
+        id: 108
+        club: "Posadas Palomar"
+        distrito_id: 4
+        programa_id: 1
+    110:
+        id: 110
+        club: "Canuelas"
+        distrito_id: 5
+        programa_id: 1
+    111:
+        id: 111
+        club: "General Rodriguez"
+        distrito_id: 5
+        programa_id: 1
+    112:
+        id: 112
+        club: "Jose C. Paz"
+        distrito_id: 5
+        programa_id: 1
+    113:
+        id: 113
+        club: "Moreno Florencio Molina Campos"
+        distrito_id: 5
+        programa_id: 1
+    114:
+        id: 114
+        club: "Merlo Norte"
+        distrito_id: 5
+        programa_id: 1
+    115:
+        id: 115
+        club: "Ituzaingo"
+        distrito_id: 5
+        programa_id: 1
+    116:
+        id: 116
+        club: "Moreno Sur"
+        distrito_id: 5
+        programa_id: 1
+    117:
+        id: 117
+        club: "Caseros Sur"
+        distrito_id: 5
+        programa_id: 1
+    118:
+        id: 118
+        club: "General Sarmiento"
+        distrito_id: 5
+        programa_id: 1
+    119:
+        id: 119
+        club: "Libertad"
+        distrito_id: 5
+        programa_id: 1
+    120:
+        id: 120
+        club: "Los Polvorines"
+        distrito_id: 5
+        programa_id: 1
+    121:
+        id: 121
+        club: "Mercedes Oeste"
+        distrito_id: 5
+        programa_id: 1
+    122:
+        id: 122
+        club: "San Martin"
+        distrito_id: 5
+        programa_id: 1
+    123:
+        id: 123
+        club: "Moreno"
+        distrito_id: 5
+        programa_id: 1
+    124:
+        id: 124
+        club: "San Rafael"
+        distrito_id: 6
+        programa_id: 1
+    125:
+        id: 125
+        club: "Sierras San Luis"
+        distrito_id: 6
+        programa_id: 1
+    126:
+        id: 126
+        club: "Godoy Cruz"
+        distrito_id: 6
+        programa_id: 1
+    127:
+        id: 127
+        club: "Barraquero"
+        distrito_id: 6
+        programa_id: 1
+    128:
+        id: 128
+        club: "San Juan Capital"
+        distrito_id: 6
+        programa_id: 1
+    129:
+        id: 129
+        club: "Concepcion Este"
+        distrito_id: 6
+        programa_id: 1
+    130:
+        id: 130
+        club: "Mendoza Norte"
+        distrito_id: 6
+        programa_id: 1
+    137:
+        id: 137
+        club: "Casilda"
+        distrito_id: 11
+        programa_id: 1
+    138:
+        id: 138
+        club: "Rosario"
+        distrito_id: 11
+        programa_id: 1
+    139:
+        id: 139
+        club: "Venado Tuerto"
+        distrito_id: 11
+        programa_id: 1
+    140:
+        id: 140
+        club: "Colonia"
+        distrito_id: 12
+        programa_id: 1
+    141:
+        id: 141
+        club: "Tarariras"
+        distrito_id: 12
+        programa_id: 1
+    142:
+        id: 142
+        club: "Resistencia Norte"
+        distrito_id: 4
+        programa_id: 1
+    143:
+        id: 143
+        club: "Fernando de la Mora"
+        distrito_id: 4
+        programa_id: 1
+    144:
+        id: 144
+        club: "Corrientes"
+        distrito_id: 4
+        programa_id: 1
+    145:
+        id: 145
+        club: "Caucete"
+        distrito_id: 6
+        programa_id: 1
+    146:
+        id: 146
+        club: "Colonia Valdense"
+        distrito_id: 12
+        programa_id: 1
+    147:
+        id: 147
+        club: "Ombues de Lavalle"
+        distrito_id: 12
+        programa_id: 1
+    148:
+        id: 148
+        club: "Paso del Molino"
+        distrito_id: 12
+        programa_id: 1
+    149:
+        id: 149
+        club: "San Gregorio"
+        distrito_id: 12
+        programa_id: 1
+    151:
+        id: 151
+        club: "Echesorty"
+        distrito_id: 11
+        programa_id: 1
+    152:
+        id: 152
+        club: "Montserrat UAI"
+        distrito_id: 7
+        programa_id: 1
+    153:
+        id: 153
+        club: "Villa Urquiza"
+        distrito_id: 7
+        programa_id: 1
+    154:
+        id: 154
+        club: "Paso el Rey"
+        distrito_id: 5
+        programa_id: 1
+    155:
+        id: 155
+        club: "Lambare Costa del Rio"
+        distrito_id: 4
+        programa_id: 1
+    156:
+        id: 156
+        club: "Ajos"
+        distrito_id: 4
+        programa_id: 1
+    157:
+        id: 157
+        club: "La Canada"
+        distrito_id: 1
+        programa_id: 1
+    159:
+        id: 159
+        club: "Andes del Peru"
+        distrito_id: 19
+        programa_id: 1
+    160:
+        id: 160
+        club: "Andes del Peru Miraflores"
+        distrito_id: 19
+        programa_id: 1
+    161:
+        id: 161
+        club: "Los Alamos de Moterrico"
+        distrito_id: 19
+        programa_id: 1
+    162:
+        id: 162
+        club: "Sur del Lago"
+        distrito_id: 20
+        programa_id: 1
+    163:
+        id: 163
+        club: "Las Torres Satelite"
+        distrito_id: 21
+        programa_id: 1
+    164:
+        id: 164
+        club: "Berlin"
+        distrito_id: 22
+        programa_id: 1
+    165:
+        id: 165
+        club: "Apizaco"
+        distrito_id: 23
+        programa_id: 1
+//Continuar en pagina 6
+//        xx:
+//        id: xx
+//        club: "xxx"
+//        distrito_id: xx
+//        programa_id: 1

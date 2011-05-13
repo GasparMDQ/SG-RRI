@@ -23,13 +23,13 @@
 <?php if ($sf_user->isAuthenticated()): ?>
 <!-- usuario logueado -->
                 <ul>
-                    <li>user email</li>
+                    <li><strong><?php echo $sf_user->getGuardUser()->getEmailAddress() ?></strong></li>
                     <li><a href="<?php echo url_for('informes/eventos') ?>">Perfil</a></li>
                     <li class="last"><a href="<?php echo url_for('informes/reportes') ?>">Salir</a></li>
                 </ul>
 <!-- usuario logueado y admin -->
                 <ul>
-                    <li>user email</li>
+                    <li><strong><?php echo $sf_user->getGuardUser()->getEmailAddress() ?></strong></li>
                     <li><a href="<?php echo url_for('informes/eventos') ?>">Administracion (#)</a></li>
                     <li><a href="<?php echo url_for('informes/eventos') ?>">Perfil</a></li>
                     <li class="last"><?php echo link_to('Salir', 'sf_guard_signout') ?></li>
