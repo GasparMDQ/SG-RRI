@@ -1,10 +1,10 @@
 <?php
 
 /**
- * club actions.
+ * clubes actions.
  *
  * @package    base_de_datos
- * @subpackage club
+ * @subpackage clubes
  * @author     Your name here
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
@@ -14,6 +14,8 @@ class clubesActions extends sfActions
   {
     $this->clubess = Doctrine_Core::getTable('Clubes')
       ->createQuery('a')
+      ->innerJoin('a.Distritos')
+      ->innerJoin('a.CfgProgramas')
       ->execute();
   }
 
@@ -63,7 +65,7 @@ class clubesActions extends sfActions
     $this->forward404Unless($clubes = Doctrine_Core::getTable('Clubes')->find(array($request->getParameter('id'))), sprintf('Object clubes does not exist (%s).', $request->getParameter('id')));
     $clubes->delete();
 
-    $this->redirect('club/index');
+    $this->redirect('clubes/index');
   }
 
   protected function processForm(sfWebRequest $request, sfForm $form)
@@ -73,7 +75,7 @@ class clubesActions extends sfActions
     {
       $clubes = $form->save();
 
-      $this->redirect('club/edit?id='.$clubes->getId());
+      $this->redirect('clubes/edit?id='.$clubes->getId());
     }
   }
 }
