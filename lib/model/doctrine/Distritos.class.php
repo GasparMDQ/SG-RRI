@@ -12,5 +12,17 @@
  */
 class Distritos extends BaseDistritos
 {
+    public function __toString()
+    {
+        return sprintf('%s', $this->getDistrito());
+    }
 
+    public function getClubesDistritoQuery()
+    {
+    $q = Doctrine_Query::create()
+        ->from('Clubes c')
+        ->where('c.distrito_id = ?', $this->getId())
+        ->addOrderBy('c.club ASC');
+    return $q;
+    }
 }

@@ -2,12 +2,15 @@ CfgProgramas:
     Rotaract:
         id:     1
         programa:   Rotaract
+        logo:   "rotaract"
     Rotary:
         id:     2
         programa:   Rotary
+        logo:   "rotary"
     Interact:
         id:     3
         programa:   Interact
+        logo:   "interact"
     YEP:
         id:     6
         programa:   YEP

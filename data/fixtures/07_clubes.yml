@@ -749,9 +749,238 @@ clubes:
         club: "Apizaco"
         distrito_id: 23
         programa_id: 1
-//Continuar en pagina 6
-//        xx:
-//        id: xx
-//        club: "xxx"
-//        distrito_id: xx
-//        programa_id: 1
+    166:
+        id: 166
+        club: "Puebla de los Angeles"
+        distrito_id: 23
+        programa_id: 1
+    167:
+        id: 167
+        club: "Puebla Reforma"
+        distrito_id: 23
+        programa_id: 1
+    168:
+        id: 168
+        club: "Puebla Centro Historico"
+        distrito_id: 23
+        programa_id: 1
+    169:
+        id: 169
+        club: "Puebla Industrial"
+        distrito_id: 23
+        programa_id: 1
+    170:
+        id: 170
+        club: "Puebla Oriente"
+        distrito_id: 23
+        programa_id: 1
+    171:
+        id: 171
+        club: "Acatzingo"
+        distrito_id: 23
+        programa_id: 1
+    172:
+        id: 172
+        club: "Atilxco"
+        distrito_id: 23
+        programa_id: 1
+    173:
+        id: 173
+        club: "Huamantla AC"
+        distrito_id: 23
+        programa_id: 1
+    174:
+        id: 174
+        club: "Huamantla Forjadores"
+        distrito_id: 23
+        programa_id: 1
+    175:
+        id: 175
+        club: "Tlaxcala Centro"
+        distrito_id: 23
+        programa_id: 1
+    176:
+        id: 176
+        club: "Laboulaye"
+        distrito_id: 1
+        programa_id: 1
+    177:
+        id: 177
+        club: "Sud Puerto Mar del Plata"
+        distrito_id: 9
+        programa_id: 1
+    179:
+        id: 179
+        club: "Dolores"
+        distrito_id: 9
+        programa_id: 1
+    180:
+        id: 180
+        club: "Las Heras Aconcagua"
+        distrito_id: 6
+        programa_id: 1
+    181:
+        id: 181
+        club: "San Vicente Olavarria"
+        distrito_id: 9
+        programa_id: 1
+    182:
+        id: 182
+        club: "Encarnacion Oeste"
+        distrito_id: 4
+        programa_id: 1
+    183:
+        id: 183
+        club: "Carmen de Areco"
+        distrito_id: 2
+        programa_id: 1
+    184:
+        id: 184
+        club: "Palomar"
+        distrito_id: 5
+        programa_id: 1
+    185:
+        id: 185
+        club: "San Luis de la Punta"
+        distrito_id: 6
+        programa_id: 1
+    186:
+        id: 186
+        club: "Comodoro Rivadavia Oeste"
+        distrito_id: 10
+        programa_id: 1
+    187:
+        id: 187
+        club: "San Martin Mendoza"
+        distrito_id: 6
+        programa_id: 1
+    188:
+        id: 188
+        club: "Buenos Aires"
+        distrito_id: 7
+        programa_id: 1
+    189:
+        id: 189
+        club: "Formosa"
+        distrito_id: 4
+        programa_id: 1
+    190:
+        id: 190
+        club: "Meridiano V"
+        distrito_id: 8
+        programa_id: 1
+    194:
+        id: 194
+        club: "Atlantida"
+        distrito_id: 13
+        programa_id: 1
+    195:
+        id: 195
+        club: "Maldonado"
+        distrito_id: 13
+        programa_id: 1
+    196:
+        id: 196
+        club: "Florencia Varela"
+        distrito_id: 8
+        programa_id: 1
+    197:
+        id: 197
+        club: "Rivadavia San Juan"
+        distrito_id: 6
+        programa_id: 1
+    198:
+        id: 198
+        club: "Resistencia Oeste"
+        distrito_id: 4
+        programa_id: 1
+    199:
+        id: 199
+        club: "Mage"
+        distrito_id: 25
+        programa_id: 1
+    200:
+        id: 200
+        club: "Tijuana Oeste"
+        distrito_id: 26
+        programa_id: 1
+    201:
+        id: 201
+        club: "Cochabamba"
+        distrito_id: 27
+        programa_id: 1
+    202:
+        id: 202
+        club: "Ituzaingo Maronas"
+        distrito_id: 12
+        programa_id: 1
+    203:
+        id: 203
+        club: "Nuevo Laredo Reforma"
+        distrito_id: 28
+        programa_id: 1
+    204:
+        id: 204
+        club: "Ituzaingo Posta Santa Rosa"
+        distrito_id: 5
+        programa_id: 1
+    205:
+        id: 205
+        club: "La Consulta"
+        distrito_id: 6
+        programa_id: 1
+    206:
+        id: 206
+        club: "La Paz Illimani"
+        distrito_id: 27
+        programa_id: 1
+    207:
+        id: 207
+        club: "Citibell"
+        distrito_id: 8
+        programa_id: 1
+    208:
+        id: 208
+        club: "Mendoza Tajamar"
+        distrito_id: 6
+        programa_id: 1
+    209:
+        id: 209
+        club: "Bulevar"
+        distrito_id: 12
+        programa_id: 1
+    211:
+        id: 211
+        club: "Tacuarembo"
+        distrito_id: 12
+        programa_id: 1
+    212:
+        id: 212
+        club: "Hernando"
+        distrito_id: 1
+        programa_id: 1
+    213:
+        id: 213
+        club: "Lima Sunrise"
+        distrito_id: 19
+        programa_id: 1
+    215:
+        id: 215
+        club: "Puerto Madero"
+        distrito_id: 7
+        programa_id: 2
+    217:
+        id: 217
+        club: "Cali Pance"
+        distrito_id: 30
+        programa_id: 1
+    218:
+        id: 218
+        club: "Resistencia Nuevas Generaciones"
+        distrito_id: 4
+        programa_id: 2
+    219:
+        id: 219
+        club: "Tinogasta"
+        distrito_id: 1
+        programa_id: 1

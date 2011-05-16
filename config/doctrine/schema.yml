@@ -460,16 +460,17 @@ Distritos:
       local: id
       foreign: distrito_id
       type: many
-    sfGuardUser:
+    Gobernador:
+      class: sfGuardUser
       local: gd_id
       foreign: id
       type: one
-    sfGuardUser_1:
+    RepresentanteR:
       class: sfGuardUser
       local: rdr_id
       foreign: id
       type: one
-    sfGuardUser_2:
+    RepresentanteI:
       class: sfGuardUser
       local: rdi_id
       foreign: id

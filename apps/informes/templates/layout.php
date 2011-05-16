@@ -3,7 +3,9 @@
   <head>
     <?php include_http_metas() ?>
     <?php include_metas() ?>
-    <?php include_title() ?>
+    <title>
+        <?php include_slot('title', 'Sistema de Gestion - RRI') ?>
+    </title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <?php include_stylesheets() ?>
     <?php include_javascripts() ?>
@@ -64,7 +66,6 @@
             <?php echo $sf_user->getFlash('error') ?>
           </div>
         <?php endif; ?>
- 
         <div class="content">
           <?php echo $sf_content ?>
         </div>

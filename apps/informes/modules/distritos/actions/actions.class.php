@@ -12,15 +12,25 @@ class distritosActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->distritoss = Doctrine_Core::getTable('distritos')
+    $this->distritos = Doctrine_Core::getTable('distritos')
       ->createQuery('a')
+      ->addOrderBy('a.distrito ASC')
       ->execute();
   }
 
   public function executeShow(sfWebRequest $request)
   {
-    $this->distritos = Doctrine_Core::getTable('distritos')->find(array($request->getParameter('id')));
-    $this->forward404Unless($this->distritos);
+    $this->distrito = Doctrine_Core::getTable('distritos')->find(array($request->getParameter('id')));
+    
+    $this->pager = new sfDoctrinePager(
+        'Clubes',
+        sfConfig::get('app_max_clubes_por_distrito')
+    );
+    $this->pager->setQuery($this->distrito->getClubesDistritoQuery());
+    $this->pager->setPage($request->getParameter('page', 1));
+    $this->pager->init();
+
+    $this->forward404Unless($this->distrito);
   }
 
   public function executeNew(sfWebRequest $request)

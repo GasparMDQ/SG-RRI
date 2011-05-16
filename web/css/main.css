@@ -71,7 +71,7 @@ body
   text-transform: uppercase;
 /*  background: url(../images/bg-listheader.gif) no-repeat; */
   line-height: 32px;
-  color: #fff;
+  font-weight: bold;
 }
 
 #content h1 a

@@ -2,42 +2,55 @@ Distritos:
     4815:
         id:     1
         distrito:   4815
+        aim_id: 1
     4825:
         id:     2
         distrito:   4825
+        aim_id: 1
     4835:
         id:     3
         distrito:   4835
+        aim_id: 1
     4845:
         id:     4
         distrito:   4845
+        aim_id: 1
     4855:
         id:     5
         distrito:   4855
+        aim_id: 1
     4865:
         id:     6
         distrito:   4865
+        aim_id: 1
     4890:
         id:     7
         distrito:   4890
+        aim_id: 1
     4915:
         id:     8
         distrito:   4915
+        aim_id: 1
     4920:
         id:     9
         distrito:   4920
+        aim_id: 1
     4930:
         id:     10
         distrito:   4930
+        aim_id: 1
     4940:
         id:     11
         distrito:   4940
+        aim_id: 1
     4970:
         id:     12
         distrito:   4970
+        aim_id: 1
     4980:
         id:     13
         distrito:   4980
+        aim_id: 1
     4450:
         id:     19
         distrito:   4450

@@ -3,8 +3,9 @@
 
 # default values
 all:
-      sf_guard_plugin:
+        sf_guard_plugin:
 # the plugin use the referer as default
 #        success_signin_url:      @my_route?param=value
 # the plugin use the referer as default
         success_signout_url:     @homepage
+        max_clubes_por_distrito:    10

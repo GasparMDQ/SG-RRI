@@ -17,18 +17,18 @@ abstract class BaseDistritosForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'       => new sfWidgetFormInputHidden(),
       'distrito' => new sfWidgetFormInputText(),
-      'gd_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => true)),
-      'rdr_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser_1'), 'add_empty' => true)),
-      'rdi_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser_2'), 'add_empty' => true)),
+      'gd_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Gobernador'), 'add_empty' => true)),
+      'rdr_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('RepresentanteR'), 'add_empty' => true)),
+      'rdi_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('RepresentanteI'), 'add_empty' => true)),
       'aim_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Aims'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
       'id'       => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'distrito' => new sfValidatorInteger(),
-      'gd_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'required' => false)),
-      'rdr_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser_1'), 'required' => false)),
-      'rdi_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser_2'), 'required' => false)),
+      'gd_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Gobernador'), 'required' => false)),
+      'rdr_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('RepresentanteR'), 'required' => false)),
+      'rdi_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('RepresentanteI'), 'required' => false)),
       'aim_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Aims'), 'required' => false)),
     ));
 
