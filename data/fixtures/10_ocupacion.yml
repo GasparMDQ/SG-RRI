@@ -1,0 +1,64 @@
+CfgOcupacion:
+    1:
+        id:     1
+        ocupacion:   "Administracion y Contabilidad"
+    2:
+        id:     2
+        ocupacion:   "Arquitectura"
+    3:
+        id:     3
+        ocupacion:   "Comercial - Ventas"
+    4:
+        id:     4
+        ocupacion:   "Comercio Exterior"
+    5:
+        id:     5
+        ocupacion:   "Disenio"
+    6:
+        id:     6
+        ocupacion:   "Educacion - Psicopedagogia"
+    7:
+        id:     7
+        ocupacion:   "Estetica - Cuidado Personal"
+    8:
+        id:     8
+        ocupacion:   "Finanzas - Economia"
+    9:
+        id:     9
+        ocupacion:   "Gastronomia"
+    10:
+        id:     10
+        ocupacion:   "Ingenieria - Ciencias"
+    11:
+        id:     11
+        ocupacion:   "Legales"
+    12:
+        id:     12
+        ocupacion:   "Marketing y Publicidad"
+    13:
+        id:     13
+        ocupacion:   "Musica - Arte - Cultura"
+    14:
+        id:     14
+        ocupacion:   "Produccion"
+    15:
+        id:     15
+        ocupacion:   "Secretaria - Atencion al Cliente"
+    16:
+        id:     16
+        ocupacion:   "Recursos Humanos"
+    17:
+        id:     17
+        ocupacion:   "Relaciones Publicas e Institucionales"
+    18:
+        id:     18
+        ocupacion:   "Salud"
+    19:
+        id:     19
+        ocupacion:   "Sistemas - Tecnologia"
+    21:
+        id:     21
+        ocupacion:   "Otros"
+    22:
+        id:     22
+        ocupacion:   "Estudiante"

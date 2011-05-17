@@ -16,16 +16,26 @@ abstract class BasesfGuardUserProfileForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'               => new sfWidgetFormInputHidden(),
-      'user_id'          => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('User'), 'add_empty' => true)),
+      'user_id'          => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('User'), 'add_empty' => false)),
       'apodo'            => new sfWidgetFormInputText(),
       'fecha_nacimiento' => new sfWidgetFormDate(),
+      'tipo_dni'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('tipodni'), 'add_empty' => true)),
+      'nro_dni'          => new sfWidgetFormInputText(),
+      'ocupacion'        => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('ocupacion'), 'add_empty' => true)),
+      'created_at'       => new sfWidgetFormDateTime(),
+      'updated_at'       => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
       'id'               => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'user_id'          => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('User'), 'required' => false)),
+      'user_id'          => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('User'))),
       'apodo'            => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'fecha_nacimiento' => new sfValidatorDate(array('required' => false)),
+      'tipo_dni'         => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('tipodni'), 'required' => false)),
+      'nro_dni'          => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'ocupacion'        => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('ocupacion'), 'required' => false)),
+      'created_at'       => new sfValidatorDateTime(),
+      'updated_at'       => new sfValidatorDateTime(),
     ));
 
     $this->widgetSchema->setNameFormat('sf_guard_user_profile[%s]');

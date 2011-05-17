@@ -1,0 +1,10 @@
+CfgTipoDni:
+    ci:
+        id:     1
+        tipo:   "Cedula de Identidad"
+    dni:
+        id:     2
+        tipo:   "Documento Nacional de Identidad"
+    pasaporte:
+        id:     3
+        tipo:   "Pasaporte"

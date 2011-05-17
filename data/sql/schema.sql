@@ -2,9 +2,11 @@ CREATE TABLE aims (id BIGINT AUTO_INCREMENT, aim VARCHAR(255) NOT NULL, sigla VA
 CREATE TABLE aims_admin (id BIGINT AUTO_INCREMENT, aim_id BIGINT NOT NULL, user_id BIGINT NOT NULL, INDEX aim_id_idx (aim_id), INDEX user_id_idx (user_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE cfg_ciudades (id BIGINT AUTO_INCREMENT, provincia_id BIGINT NOT NULL, ciudad VARCHAR(255) NOT NULL, INDEX provincia_id_idx (provincia_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE cfg_dias (id BIGINT AUTO_INCREMENT, dia VARCHAR(255), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE cfg_ocupacion (id BIGINT AUTO_INCREMENT, ocupacion VARCHAR(255) NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE cfg_paises (id BIGINT AUTO_INCREMENT, pais VARCHAR(255) NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE cfg_programas (id BIGINT AUTO_INCREMENT, programa VARCHAR(255), logo VARCHAR(255), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE cfg_provincias (id BIGINT AUTO_INCREMENT, pais_id BIGINT NOT NULL, provincia VARCHAR(255) NOT NULL, INDEX pais_id_idx (pais_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE cfg_tipo_dni (id BIGINT AUTO_INCREMENT, tipo VARCHAR(255) NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE clubes (id BIGINT AUTO_INCREMENT, club VARCHAR(255) NOT NULL, email VARCHAR(255), url VARCHAR(255), direccion VARCHAR(255), presidente_id BIGINT, ciudad_id BIGINT, distrito_id BIGINT NOT NULL, programa_id BIGINT NOT NULL, INDEX distrito_id_idx (distrito_id), INDEX ciudad_id_idx (ciudad_id), INDEX programa_id_idx (programa_id), INDEX presidente_id_idx (presidente_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE clubes_admin (id BIGINT AUTO_INCREMENT, club_id BIGINT NOT NULL, user_id BIGINT NOT NULL, INDEX club_id_idx (club_id), INDEX user_id_idx (user_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE clubes_reunion (id BIGINT AUTO_INCREMENT, club_id BIGINT NOT NULL, dia_id BIGINT NOT NULL, hora TIME NOT NULL, INDEX dia_id_idx (dia_id), INDEX club_id_idx (club_id), PRIMARY KEY(id)) ENGINE = INNODB;
@@ -18,7 +20,7 @@ CREATE TABLE sf_guard_remember_key (id BIGINT AUTO_INCREMENT, user_id BIGINT, re
 CREATE TABLE sf_guard_user (id BIGINT AUTO_INCREMENT, first_name VARCHAR(255), last_name VARCHAR(255), email_address VARCHAR(255) NOT NULL UNIQUE, username VARCHAR(128) NOT NULL UNIQUE, algorithm VARCHAR(128) DEFAULT 'sha1' NOT NULL, salt VARCHAR(128), password VARCHAR(128), is_active TINYINT(1) DEFAULT '1', is_super_admin TINYINT(1) DEFAULT '0', last_login DATETIME, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX is_active_idx_idx (is_active), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_user_group (user_id BIGINT, group_id BIGINT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(user_id, group_id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_user_permission (user_id BIGINT, permission_id BIGINT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(user_id, permission_id)) ENGINE = INNODB;
-CREATE TABLE sf_guard_user_profile (id BIGINT AUTO_INCREMENT, user_id BIGINT, apodo VARCHAR(255), fecha_nacimiento DATE, INDEX user_id_idx (user_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE sf_guard_user_profile (id BIGINT AUTO_INCREMENT, user_id BIGINT NOT NULL, apodo VARCHAR(255), fecha_nacimiento DATE, tipo_dni BIGINT, nro_dni VARCHAR(255), ocupacion BIGINT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX user_id_idx (user_id), INDEX tipo_dni_idx (tipo_dni), INDEX ocupacion_idx (ocupacion), PRIMARY KEY(id)) ENGINE = INNODB;
 ALTER TABLE aims ADD CONSTRAINT aims_presidente_id_sf_guard_user_id FOREIGN KEY (presidente_id) REFERENCES sf_guard_user(id);
 ALTER TABLE aims_admin ADD CONSTRAINT aims_admin_user_id_sf_guard_user_id FOREIGN KEY (user_id) REFERENCES sf_guard_user(id);
 ALTER TABLE aims_admin ADD CONSTRAINT aims_admin_aim_id_aims_id FOREIGN KEY (aim_id) REFERENCES aims(id);
@@ -47,3 +49,5 @@ ALTER TABLE sf_guard_user_group ADD CONSTRAINT sf_guard_user_group_group_id_sf_g
 ALTER TABLE sf_guard_user_permission ADD CONSTRAINT sf_guard_user_permission_user_id_sf_guard_user_id FOREIGN KEY (user_id) REFERENCES sf_guard_user(id) ON DELETE CASCADE;
 ALTER TABLE sf_guard_user_permission ADD CONSTRAINT sf_guard_user_permission_permission_id_sf_guard_permission_id FOREIGN KEY (permission_id) REFERENCES sf_guard_permission(id) ON DELETE CASCADE;
 ALTER TABLE sf_guard_user_profile ADD CONSTRAINT sf_guard_user_profile_user_id_sf_guard_user_id FOREIGN KEY (user_id) REFERENCES sf_guard_user(id) ON DELETE CASCADE;
+ALTER TABLE sf_guard_user_profile ADD CONSTRAINT sf_guard_user_profile_tipo_dni_cfg_tipo_dni_id FOREIGN KEY (tipo_dni) REFERENCES cfg_tipo_dni(id);
+ALTER TABLE sf_guard_user_profile ADD CONSTRAINT sf_guard_user_profile_ocupacion_cfg_ocupacion_id FOREIGN KEY (ocupacion) REFERENCES cfg_ocupacion(id);

@@ -9,18 +9,31 @@
  * @property integer $user_id
  * @property string $apodo
  * @property date $fecha_nacimiento
+ * @property integer $tipo_dni
+ * @property string $nro_dni
+ * @property integer $ocupacion
  * @property sfGuardUser $User
+ * @property CfgTipoDni $tipodni
+ * @property CfgOcupacion $ocupacion
  * 
  * @method integer            getId()               Returns the current record's "id" value
  * @method integer            getUserId()           Returns the current record's "user_id" value
  * @method string             getApodo()            Returns the current record's "apodo" value
  * @method date               getFechaNacimiento()  Returns the current record's "fecha_nacimiento" value
+ * @method integer            getTipoDni()          Returns the current record's "tipo_dni" value
+ * @method string             getNroDni()           Returns the current record's "nro_dni" value
+ * @method CfgOcupacion       getOcupacion()        Returns the current record's "ocupacion" value
  * @method sfGuardUser        getUser()             Returns the current record's "User" value
+ * @method CfgTipoDni         getTipodni()          Returns the current record's "tipodni" value
  * @method sfGuardUserProfile setId()               Sets the current record's "id" value
  * @method sfGuardUserProfile setUserId()           Sets the current record's "user_id" value
  * @method sfGuardUserProfile setApodo()            Sets the current record's "apodo" value
  * @method sfGuardUserProfile setFechaNacimiento()  Sets the current record's "fecha_nacimiento" value
+ * @method sfGuardUserProfile setTipoDni()          Sets the current record's "tipo_dni" value
+ * @method sfGuardUserProfile setNroDni()           Sets the current record's "nro_dni" value
+ * @method sfGuardUserProfile setOcupacion()        Sets the current record's "ocupacion" value
  * @method sfGuardUserProfile setUser()             Sets the current record's "User" value
+ * @method sfGuardUserProfile setTipodni()          Sets the current record's "tipodni" value
  * 
  * @package    Sistema de Gestion - Rotaract Rotary e Interact
  * @subpackage model
@@ -40,6 +53,7 @@ abstract class BasesfGuardUserProfile extends sfDoctrineRecord
              ));
         $this->hasColumn('user_id', 'integer', 8, array(
              'type' => 'integer',
+             'notnull' => true,
              'length' => 8,
              ));
         $this->hasColumn('apodo', 'string', 255, array(
@@ -55,6 +69,23 @@ abstract class BasesfGuardUserProfile extends sfDoctrineRecord
              'type' => 'date',
              'notnull' => false,
              ));
+        $this->hasColumn('tipo_dni', 'integer', 8, array(
+             'type' => 'integer',
+             'length' => 8,
+             ));
+        $this->hasColumn('nro_dni', 'string', 255, array(
+             'type' => 'string',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             'length' => 255,
+             ));
+        $this->hasColumn('ocupacion', 'integer', 8, array(
+             'type' => 'integer',
+             'length' => 8,
+             ));
     }
 
     public function setUp()
@@ -64,5 +95,17 @@ abstract class BasesfGuardUserProfile extends sfDoctrineRecord
              'local' => 'user_id',
              'foreign' => 'id',
              'onDelete' => 'CASCADE'));
+
+        $this->hasOne('CfgTipoDni as tipodni', array(
+             'local' => 'tipo_dni',
+             'foreign' => 'id'));
+
+        $this->hasOne('CfgOcupacion as ocupacion', array(
+             'local' => 'ocupacion',
+             'foreign' => 'id'));
+
+        $timestampable0 = new Doctrine_Template_Timestampable(array(
+             ));
+        $this->actAs($timestampable0);
     }
 }
