@@ -984,3 +984,143 @@ clubes:
         club: "Tinogasta"
         distrito_id: 1
         programa_id: 1
+    220:
+        id: 220
+        club: "Balcarce Cerrito"
+        distrito_id: 9
+        programa_id: 2
+    221:
+        id: 221
+        club: "Rauch"
+        distrito_id: 9
+        programa_id: 2
+    222:
+        id: 222
+        club: "Santa Teresita"
+        distrito_id: 9
+        programa_id: 2
+    223:
+        id: 223
+        club: "Mar del Plata Norte"
+        distrito_id: 9
+        programa_id: 2
+    224:
+        id: 224
+        club: "Mar del Plata"
+        distrito_id: 9
+        programa_id: 2
+    225:
+        id: 225
+        club: "Puerto Mar del Plata"
+        distrito_id: 9
+        programa_id: 2
+    226:
+        id: 226
+        club: "Miramar"
+        distrito_id: 9
+        programa_id: 2
+    227:
+        id: 227
+        club: "Pinamar"
+        distrito_id: 9
+        programa_id: 2
+    228:
+        id: 228
+        club: "Olavarria Pueblo Nuevo"
+        distrito_id: 9
+        programa_id: 2
+    229:
+        id: 229
+        club: "General Madariaga"
+        distrito_id: 9
+        programa_id: 2
+    230:
+        id: 230
+        club: "30 de Agosto"
+        distrito_id: 9
+        programa_id: 2
+    231:
+        id: 231
+        club: "Maipu"
+        distrito_id: 9
+        programa_id: 2
+    232:
+        id: 232
+        club: "Mar del Plata Oeste"
+        distrito_id: 9
+        programa_id: 2
+    233:
+        id: 233
+        club: "Santa Rosa Norte"
+        distrito_id: 9
+        programa_id: 2
+    234:
+        id: 234
+        club: "Trenque Lauquen"
+        distrito_id: 9
+        programa_id: 2
+    235:
+        id: 235
+        club: "Mar del Plata Sud"
+        distrito_id: 9
+        programa_id: 2
+    236:
+        id: 236
+        club: "Tandil"
+        distrito_id: 9
+        programa_id: 2
+    237:
+        id: 237
+        club: "San Clemente del Tuyu"
+        distrito_id: 9
+        programa_id: 2
+    238:
+        id: 238
+        club: "Santa Rosa Sur"
+        distrito_id: 9
+        programa_id: 2
+    239:
+        id: 239
+        club: "Tandil Oeste"
+        distrito_id: 9
+        programa_id: 2
+    240:
+        id: 240
+        club: "Dolores"
+        distrito_id: 9
+        programa_id: 2
+    241:
+        id: 241
+        club: "Santa Rosa"
+        distrito_id: 9
+        programa_id: 2
+    242:
+        id: 242
+        club: "Sierras Bayas"
+        distrito_id: 9
+        programa_id: 2
+    243:
+        id: 243
+        club: "Mar del Plata Peralta Ramos"
+        distrito_id: 9
+        programa_id: 2
+    244:
+        id: 244
+        club: "General Alvear"
+        distrito_id: 9
+        programa_id: 2
+    245:
+        id: 245
+        club: "Necochea Playa"
+        distrito_id: 9
+        programa_id: 2
+    246:
+        id: 246
+        club: "Mar del Plata La Perla"
+        distrito_id: 9
+        programa_id: 2
+    247:
+        id: 247
+        club: "Tres Arroyos"
+        distrito_id: 9
+        programa_id: 2
