@@ -21,6 +21,7 @@ abstract class BaseDistritosForm extends BaseFormDoctrine
       'rdr_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('RepresentanteR'), 'add_empty' => true)),
       'rdi_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('RepresentanteI'), 'add_empty' => true)),
       'aim_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Aims'), 'add_empty' => true)),
+      'zone_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Zones'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
@@ -30,6 +31,7 @@ abstract class BaseDistritosForm extends BaseFormDoctrine
       'rdr_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('RepresentanteR'), 'required' => false)),
       'rdi_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('RepresentanteI'), 'required' => false)),
       'aim_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Aims'), 'required' => false)),
+      'zone_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Zones'), 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('distritos[%s]');

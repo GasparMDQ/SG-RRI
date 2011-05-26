@@ -28,12 +28,12 @@
         </tr>
         <tr>
         <td class="zona">
-            Zona:
+            Zona: <?php echo $distrito->getZones()->getZone() ?>
         </td>
         </tr>
         <tr>
         <td class="aim">
-            Agencia Informativa: <?php echo $distrito->getAims()->getSigla() ?>
+            Agencia Informativa: <?php echo $distrito->getAims()->getAim() ?>
         </td>
         </tr>
     </table>    

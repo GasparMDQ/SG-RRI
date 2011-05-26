@@ -3,81 +3,111 @@ Distritos:
         id:     1
         distrito:   4815
         aim_id: 1
+        zone_id: 48
     4825:
         id:     2
         distrito:   4825
         aim_id: 1
+        zone_id: 48
     4835:
         id:     3
         distrito:   4835
         aim_id: 1
+        zone_id: 48
     4845:
         id:     4
         distrito:   4845
         aim_id: 1
+        zone_id: 48
     4855:
         id:     5
         distrito:   4855
         aim_id: 1
+        zone_id: 48
     4865:
         id:     6
         distrito:   4865
         aim_id: 1
+        zone_id: 48
     4890:
         id:     7
         distrito:   4890
         aim_id: 1
+        zone_id: 48
     4915:
         id:     8
         distrito:   4915
         aim_id: 1
+        zone_id: 48
     4920:
         id:     9
         distrito:   4920
         aim_id: 1
+        zone_id: 48
     4930:
         id:     10
         distrito:   4930
         aim_id: 1
+        zone_id: 48
     4940:
         id:     11
         distrito:   4940
         aim_id: 1
+        zone_id: 48
     4970:
         id:     12
         distrito:   4970
         aim_id: 1
+        zone_id: 48
     4980:
         id:     13
         distrito:   4980
         aim_id: 1
+        zone_id: 48
     4450:
         id:     19
         distrito:   4450
+        aim_id: 3
+        zone_id: 47
     4380:
         id:     20
         distrito:   4380
+        zone_id: 21
     4170:
         id:     21
         distrito:   4170
+        aim_id: 14
+        zone_id: 21
     1940:
         id:     22
         distrito:   1940
+        aim_id: 13
+        zone_id: 14
     4180:
         id:     23
         distrito:   4180
+        aim_id: 14
+        zone_id: 21
     4750:
         id:     25
         distrito:   4750
+        aim_id: 11
+        zone_id: 22
     4100:
         id:     26
         distrito:   4100
+        aim_id: 13
+        zone_id: 21
     4690:
         id:     27
         distrito:   4690
+        zone_id: 48
     4130:
         id:     28
         distrito:   4130
+        aim_id: 13
+        zone_id: 21
     4280:
         id:     30
         distrito:   4280
+        zone_id: 21

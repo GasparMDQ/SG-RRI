@@ -1,0 +1,148 @@
+Zones:
+    1:
+        id:     1
+        zone:   "1"
+    2:
+        id:     2
+        zone:   "2"
+    3:
+        id:     3
+        zone:   "3"
+    4a:
+        id:     4
+        zone:   "4A"
+    4b:
+        id:     34
+        zone:   "4B"
+    5a:
+        id:     5
+        zone:   "5A"
+    5b:
+        id:     35
+        zone:   "5B"
+    6a:
+        id:     6
+        zone:   "6A"
+    6b:
+        id:     36
+        zone:   "6B"
+    7a:
+        id:     7
+        zone:   "7A"
+    7b:
+        id:     37
+        zone:   "7B"
+    8:
+        id:     8
+        zone:   "8"
+    9:
+        id:     9
+        zone:   "9"
+    10a:
+        id:     10
+        zone:   "10A"
+    10b:
+        id:     38
+        zone:   "10B"
+    11:
+        id:     11
+        zone:   "11"
+    12:
+        id:     12
+        zone:   "12"
+    13a:
+        id:     13
+        zone:   "13A"
+    13b:
+        id:     39
+        zone:   "13B"
+    13c:
+        id:     40
+        zone:   "13C"
+    14:
+        id:     14
+        zone:   "14"
+    15a:
+        id:     15
+        zone:   "15A"
+    15b:
+        id:     41
+        zone:   "15B"
+    16a:
+        id:     16
+        zone:   "16A"
+    16b:
+        id:     42
+        zone:   "16B"
+    16c:
+        id:     43
+        zone:   "16C"
+    17:
+        id:     17
+        zone:   "17"
+    18a:
+        id:     18
+        zone:   "18A"
+    18b:
+        id:     44
+        zone:   "18B"
+    19:
+        id:     19
+        zone:   "19"
+    20a:
+        id:     20
+        zone:   "20A"
+    20b:
+        id:     45
+        zone:   "20B"
+    21a:
+        id:     21
+        zone:   "21A"
+    21b:
+        id:     46
+        zone:   "21B"
+    22a:
+        id:     22
+        zone:   "22A"
+    22b:
+        id:     47
+        zone:   "22B"
+    23a:
+        id:     23
+        zone:   "23A"
+    23b:
+        id:     48
+        zone:   "23B"
+    24:
+        id:     24
+        zone:   "24"
+    25:
+        id:     25
+        zone:   "25"
+    26:
+        id:     26
+        zone:   "26"
+    27:
+        id:     27
+        zone:   "27"
+    28:
+        id:     28
+        zone:   "28"
+    29:
+        id:     29
+        zone:   "29"
+    30:
+        id:     30
+        zone:   "30"
+    31:
+        id:     31
+        zone:   "31"
+    32:
+        id:     32
+        zone:   "32"
+    33:
+        id:     33
+        zone:   "33"
+    34:
+        id:     49
+        zone:   "34"

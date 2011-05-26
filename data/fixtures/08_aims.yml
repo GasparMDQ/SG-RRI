@@ -3,3 +3,67 @@ Aims:
         id:     1
         aim:   "Agencia Informativa Argentina Uruguaya Paraguaya"
         sigla: "A.I.R.A.U.P."
+    ACCT:
+        id:     2
+        aim:   "America, Canada, Caribbean Together Districts"
+        sigla: "A.C.C.T"
+    AIRAC:
+        id:     3
+        aim:   "Agencia Informativa Rotaractiana Andina Centro"
+        sigla: "A.I.R.A.C."
+    CRN:
+        id:     4
+        aim:   "Contactorgaan Rotaract Nederland"
+        sigla: "C.R.N."
+    DANIO:
+        id:     5
+        aim:   "Rotaract Danmark"
+        sigla: "DANIO"
+    ERIC:
+        id:     6
+        aim:   "European Rotaract Information Centre"
+        sigla: "E.R.I.C."
+    RFRANCE:
+        id:     7
+        aim:   "Coordination Nationale Rotaract France"
+        sigla: "Rotaract France"
+    KORO:
+        id:     8
+        aim:   "Korean Rotaractor Organization"
+        sigla: "KORO"
+    NRMIO:
+        id:     9
+        aim:   "Nigerian Rotaract Multidistrict Information Organization"
+        sigla: "N.R.M.I.O."
+    NORGE:
+        id:     10
+        aim:   "Norwegian Rotaract"
+        sigla: "Rotaract N.O.R.G.E."
+    OMIR:
+        id:     11
+        aim:   "Organizacao Multidistrital de Informacoes de Rotaract Clubs do Brazil"
+        sigla: "O.M.I.R."
+    PILI:
+        id:     12
+        aim:   "Philippines Rotaract Multidistrict Information Organization"
+        sigla: "Pilipinas Rotaract"
+    RDK:
+        id:     13
+        aim:   "Rotaract Deutschland Komitee"
+        sigla: "R.D.K."
+    REM:
+        id:     14
+        aim:   "Agencia Informativa Rotaract en Mexico"
+        sigla: "R.E.M."
+    RGBI:
+        id:     15
+        aim:   "Rotaract in Great Britain and Ireland"
+        sigla: "R.G.B.I."
+    SEARIC:
+        id:     16
+        aim:   "Southeast Asia Rotaract Information Center"
+        sigla: "S.E.A.R.I.C."
+    TURK:
+        id:     17
+        aim:   "Turkiye Ulusal Rotaract Komitesi"
+        sigla: "T.U.R.K."

@@ -97,6 +97,29 @@ CfgOcupacion:
       foreign: ocupacion
       type: many
       
+Zones:
+  connection: doctrine
+  tableName: zones
+  columns:
+    id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    zone:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Distritos:
+      local: id
+      foreign: zone_id
+      type: many
+
 Aims:
   connection: doctrine
   tableName: aims
@@ -518,6 +541,13 @@ Distritos:
       primary: false
       notnull: false
       autoincrement: false
+    zone_id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
   relations:
     Aims:
       local: aim_id
@@ -546,7 +576,11 @@ Distritos:
       local: rdi_id
       foreign: id
       type: one
- 
+    Zones:
+      local: zone_id
+      foreign: id
+      type: one
+
 DistritosAdmin:
   connection: doctrine
   tableName: distritos_admin

@@ -18,6 +18,7 @@ abstract class BaseDistritosFormFilter extends BaseFormFilterDoctrine
       'rdr_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('RepresentanteR'), 'add_empty' => true)),
       'rdi_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('RepresentanteI'), 'add_empty' => true)),
       'aim_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Aims'), 'add_empty' => true)),
+      'zone_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Zones'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
@@ -26,6 +27,7 @@ abstract class BaseDistritosFormFilter extends BaseFormFilterDoctrine
       'rdr_id'   => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('RepresentanteR'), 'column' => 'id')),
       'rdi_id'   => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('RepresentanteI'), 'column' => 'id')),
       'aim_id'   => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Aims'), 'column' => 'id')),
+      'zone_id'  => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Zones'), 'column' => 'id')),
     ));
 
     $this->widgetSchema->setNameFormat('distritos_filters[%s]');
@@ -51,6 +53,7 @@ abstract class BaseDistritosFormFilter extends BaseFormFilterDoctrine
       'rdr_id'   => 'ForeignKey',
       'rdi_id'   => 'ForeignKey',
       'aim_id'   => 'ForeignKey',
+      'zone_id'  => 'ForeignKey',
     );
   }
 }

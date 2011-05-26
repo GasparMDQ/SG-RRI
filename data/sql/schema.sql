@@ -10,8 +10,9 @@ CREATE TABLE cfg_tipo_dni (id BIGINT AUTO_INCREMENT, tipo VARCHAR(255) NOT NULL,
 CREATE TABLE clubes (id BIGINT AUTO_INCREMENT, club VARCHAR(255) NOT NULL, email VARCHAR(255), url VARCHAR(255), direccion VARCHAR(255), presidente_id BIGINT, ciudad_id BIGINT, distrito_id BIGINT NOT NULL, programa_id BIGINT NOT NULL, INDEX distrito_id_idx (distrito_id), INDEX ciudad_id_idx (ciudad_id), INDEX programa_id_idx (programa_id), INDEX presidente_id_idx (presidente_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE clubes_admin (id BIGINT AUTO_INCREMENT, club_id BIGINT NOT NULL, user_id BIGINT NOT NULL, INDEX club_id_idx (club_id), INDEX user_id_idx (user_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE clubes_reunion (id BIGINT AUTO_INCREMENT, club_id BIGINT NOT NULL, dia_id BIGINT NOT NULL, hora TIME NOT NULL, INDEX dia_id_idx (dia_id), INDEX club_id_idx (club_id), PRIMARY KEY(id)) ENGINE = INNODB;
-CREATE TABLE distritos (id BIGINT AUTO_INCREMENT, distrito BIGINT NOT NULL, gd_id BIGINT, rdr_id BIGINT, rdi_id BIGINT, aim_id BIGINT, INDEX aim_id_idx (aim_id), INDEX gd_id_idx (gd_id), INDEX rdr_id_idx (rdr_id), INDEX rdi_id_idx (rdi_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE distritos (id BIGINT AUTO_INCREMENT, distrito BIGINT NOT NULL, gd_id BIGINT, rdr_id BIGINT, rdi_id BIGINT, aim_id BIGINT, zone_id BIGINT, INDEX aim_id_idx (aim_id), INDEX gd_id_idx (gd_id), INDEX rdr_id_idx (rdr_id), INDEX rdi_id_idx (rdi_id), INDEX zone_id_idx (zone_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE distritos_admin (id BIGINT AUTO_INCREMENT, distrito_id BIGINT NOT NULL, user_id BIGINT NOT NULL, INDEX distrito_id_idx (distrito_id), INDEX user_id_idx (user_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE zones (id BIGINT AUTO_INCREMENT, zone VARCHAR(255) NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_forgot_password (id BIGINT AUTO_INCREMENT, user_id BIGINT NOT NULL, unique_key VARCHAR(255), expires_at DATETIME NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX user_id_idx (user_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_group (id BIGINT AUTO_INCREMENT, name VARCHAR(255) UNIQUE, description TEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_group_permission (group_id BIGINT, permission_id BIGINT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(group_id, permission_id)) ENGINE = INNODB;
@@ -34,6 +35,7 @@ ALTER TABLE clubes_admin ADD CONSTRAINT clubes_admin_user_id_sf_guard_user_id FO
 ALTER TABLE clubes_admin ADD CONSTRAINT clubes_admin_club_id_clubes_id FOREIGN KEY (club_id) REFERENCES clubes(id);
 ALTER TABLE clubes_reunion ADD CONSTRAINT clubes_reunion_dia_id_cfg_dias_id FOREIGN KEY (dia_id) REFERENCES cfg_dias(id);
 ALTER TABLE clubes_reunion ADD CONSTRAINT clubes_reunion_club_id_clubes_id FOREIGN KEY (club_id) REFERENCES clubes(id);
+ALTER TABLE distritos ADD CONSTRAINT distritos_zone_id_zones_id FOREIGN KEY (zone_id) REFERENCES zones(id);
 ALTER TABLE distritos ADD CONSTRAINT distritos_rdr_id_sf_guard_user_id FOREIGN KEY (rdr_id) REFERENCES sf_guard_user(id);
 ALTER TABLE distritos ADD CONSTRAINT distritos_rdi_id_sf_guard_user_id FOREIGN KEY (rdi_id) REFERENCES sf_guard_user(id);
 ALTER TABLE distritos ADD CONSTRAINT distritos_gd_id_sf_guard_user_id FOREIGN KEY (gd_id) REFERENCES sf_guard_user(id);

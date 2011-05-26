@@ -13,12 +13,14 @@ Doctrine_Manager::getInstance()->bindComponent('Distritos', 'doctrine');
  * @property integer $rdr_id
  * @property integer $rdi_id
  * @property integer $aim_id
+ * @property integer $zone_id
  * @property Aims $Aims
  * @property Doctrine_Collection $Clubes
  * @property Doctrine_Collection $DistritosAdmin
  * @property sfGuardUser $Gobernador
  * @property sfGuardUser $RepresentanteR
  * @property sfGuardUser $RepresentanteI
+ * @property Zones $Zones
  * 
  * @method integer             getId()             Returns the current record's "id" value
  * @method integer             getDistrito()       Returns the current record's "distrito" value
@@ -26,24 +28,28 @@ Doctrine_Manager::getInstance()->bindComponent('Distritos', 'doctrine');
  * @method integer             getRdrId()          Returns the current record's "rdr_id" value
  * @method integer             getRdiId()          Returns the current record's "rdi_id" value
  * @method integer             getAimId()          Returns the current record's "aim_id" value
+ * @method integer             getZoneId()         Returns the current record's "zone_id" value
  * @method Aims                getAims()           Returns the current record's "Aims" value
  * @method Doctrine_Collection getClubes()         Returns the current record's "Clubes" collection
  * @method Doctrine_Collection getDistritosAdmin() Returns the current record's "DistritosAdmin" collection
  * @method sfGuardUser         getGobernador()     Returns the current record's "Gobernador" value
  * @method sfGuardUser         getRepresentanteR() Returns the current record's "RepresentanteR" value
  * @method sfGuardUser         getRepresentanteI() Returns the current record's "RepresentanteI" value
+ * @method Zones               getZones()          Returns the current record's "Zones" value
  * @method Distritos           setId()             Sets the current record's "id" value
  * @method Distritos           setDistrito()       Sets the current record's "distrito" value
  * @method Distritos           setGdId()           Sets the current record's "gd_id" value
  * @method Distritos           setRdrId()          Sets the current record's "rdr_id" value
  * @method Distritos           setRdiId()          Sets the current record's "rdi_id" value
  * @method Distritos           setAimId()          Sets the current record's "aim_id" value
+ * @method Distritos           setZoneId()         Sets the current record's "zone_id" value
  * @method Distritos           setAims()           Sets the current record's "Aims" value
  * @method Distritos           setClubes()         Sets the current record's "Clubes" collection
  * @method Distritos           setDistritosAdmin() Sets the current record's "DistritosAdmin" collection
  * @method Distritos           setGobernador()     Sets the current record's "Gobernador" value
  * @method Distritos           setRepresentanteR() Sets the current record's "RepresentanteR" value
  * @method Distritos           setRepresentanteI() Sets the current record's "RepresentanteI" value
+ * @method Distritos           setZones()          Sets the current record's "Zones" value
  * 
  * @package    Sistema de Gestion - Rotaract Rotary e Interact
  * @subpackage model
@@ -108,6 +114,15 @@ abstract class BaseDistritos extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => 8,
              ));
+        $this->hasColumn('zone_id', 'integer', 8, array(
+             'type' => 'integer',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             'length' => 8,
+             ));
     }
 
     public function setUp()
@@ -135,6 +150,10 @@ abstract class BaseDistritos extends sfDoctrineRecord
 
         $this->hasOne('sfGuardUser as RepresentanteI', array(
              'local' => 'rdi_id',
+             'foreign' => 'id'));
+
+        $this->hasOne('Zones', array(
+             'local' => 'zone_id',
              'foreign' => 'id'));
     }
 }
