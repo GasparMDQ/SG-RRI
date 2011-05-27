@@ -13,17 +13,17 @@
     <table class="autoridades">
         <tr>
         <td class="gd">
-            Gobernador: <?php echo $distrito->getGobernador()->getFirstName() ?>
+            Gobernador: <?php echo $distrito->getGobernador()->getName() ?>
         </td>
         </tr>
         <tr>
         <td class="rdr">
-            Representante Distrital de Rotaract: <?php echo $distrito->getRepresentanteR()->getFirstName() ?>
+            Representante Distrital de Rotaract: <?php echo $distrito->getRepresentanteR()->getName() ?>
         </td>
         </tr>
         <tr>
         <td class="rdi">
-            Representante Distrital de Interact: <?php echo $distrito->getRepresentanteI()->getFirstName() ?>
+            Representante Distrital de Interact: <?php echo $distrito->getRepresentanteI()->getName() ?>
         </td>
         </tr>
         <tr>

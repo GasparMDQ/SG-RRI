@@ -12,9 +12,14 @@
  * @property integer $tipo_dni
  * @property string $nro_dni
  * @property integer $ocupacion
+ * @property string $rfid
+ * @property string $direccion
+ * @property string $barrio
+ * @property integer $ciudad
  * @property sfGuardUser $User
  * @property CfgTipoDni $tipodni
  * @property CfgOcupacion $ocupacion
+ * @property CfgCiudades $ciudad
  * 
  * @method integer            getId()               Returns the current record's "id" value
  * @method integer            getUserId()           Returns the current record's "user_id" value
@@ -23,6 +28,10 @@
  * @method integer            getTipoDni()          Returns the current record's "tipo_dni" value
  * @method string             getNroDni()           Returns the current record's "nro_dni" value
  * @method CfgOcupacion       getOcupacion()        Returns the current record's "ocupacion" value
+ * @method string             getRfid()             Returns the current record's "rfid" value
+ * @method string             getDireccion()        Returns the current record's "direccion" value
+ * @method string             getBarrio()           Returns the current record's "barrio" value
+ * @method CfgCiudades        getCiudad()           Returns the current record's "ciudad" value
  * @method sfGuardUser        getUser()             Returns the current record's "User" value
  * @method CfgTipoDni         getTipodni()          Returns the current record's "tipodni" value
  * @method sfGuardUserProfile setId()               Sets the current record's "id" value
@@ -32,6 +41,10 @@
  * @method sfGuardUserProfile setTipoDni()          Sets the current record's "tipo_dni" value
  * @method sfGuardUserProfile setNroDni()           Sets the current record's "nro_dni" value
  * @method sfGuardUserProfile setOcupacion()        Sets the current record's "ocupacion" value
+ * @method sfGuardUserProfile setRfid()             Sets the current record's "rfid" value
+ * @method sfGuardUserProfile setDireccion()        Sets the current record's "direccion" value
+ * @method sfGuardUserProfile setBarrio()           Sets the current record's "barrio" value
+ * @method sfGuardUserProfile setCiudad()           Sets the current record's "ciudad" value
  * @method sfGuardUserProfile setUser()             Sets the current record's "User" value
  * @method sfGuardUserProfile setTipodni()          Sets the current record's "tipodni" value
  * 
@@ -86,6 +99,38 @@ abstract class BasesfGuardUserProfile extends sfDoctrineRecord
              'type' => 'integer',
              'length' => 8,
              ));
+        $this->hasColumn('rfid', 'string', 255, array(
+             'unique' => true,
+             'type' => 'string',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             'length' => 255,
+             ));
+        $this->hasColumn('direccion', 'string', 255, array(
+             'type' => 'string',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             'length' => 255,
+             ));
+        $this->hasColumn('barrio', 'string', 255, array(
+             'type' => 'string',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             'length' => 255,
+             ));
+        $this->hasColumn('ciudad', 'integer', 8, array(
+             'type' => 'integer',
+             'length' => 8,
+             ));
     }
 
     public function setUp()
@@ -102,6 +147,10 @@ abstract class BasesfGuardUserProfile extends sfDoctrineRecord
 
         $this->hasOne('CfgOcupacion as ocupacion', array(
              'local' => 'ocupacion',
+             'foreign' => 'id'));
+
+        $this->hasOne('CfgCiudades as ciudad', array(
+             'local' => 'ciudad',
              'foreign' => 'id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(

@@ -29,6 +29,30 @@ sfGuardUserProfile:
       autoincrement: false
     ocupacion:
       type: integer(8)
+    rfid:
+      unique: true
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    direccion:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    barrio:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    ciudad:
+      type: integer(8)
   relations:
     User:
       class: sfGuardUser
@@ -46,6 +70,11 @@ sfGuardUserProfile:
     ocupacion:
       class: CfgOcupacion
       local: ocupacion
+      foreign: id
+      type: one
+    ciudad:
+      class: CfgCiudades
+      local: ciudad
       foreign: id
       type: one
       

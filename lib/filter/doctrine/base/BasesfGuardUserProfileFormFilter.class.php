@@ -19,6 +19,10 @@ abstract class BasesfGuardUserProfileFormFilter extends BaseFormFilterDoctrine
       'tipo_dni'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('tipodni'), 'add_empty' => true)),
       'nro_dni'          => new sfWidgetFormFilterInput(),
       'ocupacion'        => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('ocupacion'), 'add_empty' => true)),
+      'rfid'             => new sfWidgetFormFilterInput(),
+      'direccion'        => new sfWidgetFormFilterInput(),
+      'barrio'           => new sfWidgetFormFilterInput(),
+      'ciudad'           => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('ciudad'), 'add_empty' => true)),
       'created_at'       => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'updated_at'       => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
     ));
@@ -30,6 +34,10 @@ abstract class BasesfGuardUserProfileFormFilter extends BaseFormFilterDoctrine
       'tipo_dni'         => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('tipodni'), 'column' => 'id')),
       'nro_dni'          => new sfValidatorPass(array('required' => false)),
       'ocupacion'        => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('ocupacion'), 'column' => 'id')),
+      'rfid'             => new sfValidatorPass(array('required' => false)),
+      'direccion'        => new sfValidatorPass(array('required' => false)),
+      'barrio'           => new sfValidatorPass(array('required' => false)),
+      'ciudad'           => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('ciudad'), 'column' => 'id')),
       'created_at'       => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'updated_at'       => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
     ));
@@ -58,6 +66,10 @@ abstract class BasesfGuardUserProfileFormFilter extends BaseFormFilterDoctrine
       'tipo_dni'         => 'ForeignKey',
       'nro_dni'          => 'Text',
       'ocupacion'        => 'ForeignKey',
+      'rfid'             => 'Text',
+      'direccion'        => 'Text',
+      'barrio'           => 'Text',
+      'ciudad'           => 'ForeignKey',
       'created_at'       => 'Date',
       'updated_at'       => 'Date',
     );

@@ -12,17 +12,20 @@ Doctrine_Manager::getInstance()->bindComponent('CfgCiudades', 'doctrine');
  * @property string $ciudad
  * @property CfgProvincias $CfgProvincias
  * @property Doctrine_Collection $Clubes
+ * @property Doctrine_Collection $sfGuardUserProfile
  * 
- * @method integer             getId()            Returns the current record's "id" value
- * @method integer             getProvinciaId()   Returns the current record's "provincia_id" value
- * @method string              getCiudad()        Returns the current record's "ciudad" value
- * @method CfgProvincias       getCfgProvincias() Returns the current record's "CfgProvincias" value
- * @method Doctrine_Collection getClubes()        Returns the current record's "Clubes" collection
- * @method CfgCiudades         setId()            Sets the current record's "id" value
- * @method CfgCiudades         setProvinciaId()   Sets the current record's "provincia_id" value
- * @method CfgCiudades         setCiudad()        Sets the current record's "ciudad" value
- * @method CfgCiudades         setCfgProvincias() Sets the current record's "CfgProvincias" value
- * @method CfgCiudades         setClubes()        Sets the current record's "Clubes" collection
+ * @method integer             getId()                 Returns the current record's "id" value
+ * @method integer             getProvinciaId()        Returns the current record's "provincia_id" value
+ * @method string              getCiudad()             Returns the current record's "ciudad" value
+ * @method CfgProvincias       getCfgProvincias()      Returns the current record's "CfgProvincias" value
+ * @method Doctrine_Collection getClubes()             Returns the current record's "Clubes" collection
+ * @method Doctrine_Collection getSfGuardUserProfile() Returns the current record's "sfGuardUserProfile" collection
+ * @method CfgCiudades         setId()                 Sets the current record's "id" value
+ * @method CfgCiudades         setProvinciaId()        Sets the current record's "provincia_id" value
+ * @method CfgCiudades         setCiudad()             Sets the current record's "ciudad" value
+ * @method CfgCiudades         setCfgProvincias()      Sets the current record's "CfgProvincias" value
+ * @method CfgCiudades         setClubes()             Sets the current record's "Clubes" collection
+ * @method CfgCiudades         setSfGuardUserProfile() Sets the current record's "sfGuardUserProfile" collection
  * 
  * @package    Sistema de Gestion - Rotaract Rotary e Interact
  * @subpackage model
@@ -72,5 +75,9 @@ abstract class BaseCfgCiudades extends sfDoctrineRecord
         $this->hasMany('Clubes', array(
              'local' => 'id',
              'foreign' => 'ciudad_id'));
+
+        $this->hasMany('sfGuardUserProfile', array(
+             'local' => 'id',
+             'foreign' => 'ciudad'));
     }
 }

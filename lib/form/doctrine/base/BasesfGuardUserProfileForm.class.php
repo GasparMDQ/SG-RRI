@@ -22,6 +22,10 @@ abstract class BasesfGuardUserProfileForm extends BaseFormDoctrine
       'tipo_dni'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('tipodni'), 'add_empty' => true)),
       'nro_dni'          => new sfWidgetFormInputText(),
       'ocupacion'        => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('ocupacion'), 'add_empty' => true)),
+      'rfid'             => new sfWidgetFormInputText(),
+      'direccion'        => new sfWidgetFormInputText(),
+      'barrio'           => new sfWidgetFormInputText(),
+      'ciudad'           => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('ciudad'), 'add_empty' => true)),
       'created_at'       => new sfWidgetFormDateTime(),
       'updated_at'       => new sfWidgetFormDateTime(),
     ));
@@ -34,9 +38,17 @@ abstract class BasesfGuardUserProfileForm extends BaseFormDoctrine
       'tipo_dni'         => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('tipodni'), 'required' => false)),
       'nro_dni'          => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'ocupacion'        => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('ocupacion'), 'required' => false)),
+      'rfid'             => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'direccion'        => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'barrio'           => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'ciudad'           => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('ciudad'), 'required' => false)),
       'created_at'       => new sfValidatorDateTime(),
       'updated_at'       => new sfValidatorDateTime(),
     ));
+
+    $this->validatorSchema->setPostValidator(
+      new sfValidatorDoctrineUnique(array('model' => 'sfGuardUserProfile', 'column' => array('rfid')))
+    );
 
     $this->widgetSchema->setNameFormat('sf_guard_user_profile[%s]');
 
