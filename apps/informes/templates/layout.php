@@ -53,7 +53,16 @@
                 </a></h1>
             </div>
         </div>
- 
+
+        <div class="path">
+            <ul>
+            <?php if (!include_slot('path')): ?>
+            </ul>
+        <?php endif; ?>
+        </div>
+
+
+        
       <div id="content">
         <?php if ($sf_user->hasFlash('notice')): ?>
           <div class="flash_notice">

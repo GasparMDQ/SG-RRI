@@ -1,6 +1,18 @@
 <?php //use_stylesheet('jobs.css') ?>
  
 <?php slot('title', sprintf('Distrito %s', $distrito->getDistrito())) ?>
+
+<?php slot('path') ?>
+    <li>
+    <a href="<?php echo url_for('home/index') ?>">Inicio</a>
+    </li>
+    <li>|
+    <a href="<?php echo url_for('distritos/index') ?>">Distritos</a>
+    </li>
+    <li class="last">|
+    <a href=""><?php echo $distrito->getDistrito() ?></a>
+    </li>
+<?php end_slot(); ?>
  
  <div class="distrito">
   <h1>Distrito <?php echo $distrito ?></h1>
@@ -78,4 +90,3 @@
   <?php endif; ?>
 </div>
 
-<a href="<?php echo url_for('distritos/index') ?>">List</a>

@@ -1,3 +1,19 @@
+<?php slot('path') ?>
+    <li>
+    <a href="<?php echo url_for('home/index') ?>">Inicio</a>
+    </li>
+    <li>|
+    <a href="<?php echo url_for('distritos/index') ?>">Distritos</a>
+    </li>
+    <li>|
+    <a href="<?php echo url_for('distritos/show?id='.$clubes->getDistritoId()) ?>"><?php echo $clubes->getDistritos()->getDistrito() ?></a>
+    </li>
+    <li class="last">|
+    <a href=""><?php echo $clubes->getClub() ?></a>
+    </li>
+<?php end_slot(); ?>
+
+
 <table>
   <tbody>
     <tr>

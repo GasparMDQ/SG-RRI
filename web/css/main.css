@@ -225,6 +225,35 @@ em
 	font-size: x-small;
 }
 
+.path {
+	display: block;
+    text-align:left;
+	margin: 0;
+}
+.path  ul {
+	padding: 3px;
+	margin: 0;
+}
+.path  li {
+	text-align: center;
+	padding: 0px;
+	margin: 0;
+	display: inline;
+}
+.path  a {
+	color: gray;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: x-small;
+}
+.path  a:hover {
+	color: black;
+/*	text-decoration: underline; */
+	font-weight: bold;
+	font-size: x-small;
+}
+
+
 .acceso {
 	float: right;
 	text-align:right;

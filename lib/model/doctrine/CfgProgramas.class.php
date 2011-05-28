@@ -12,5 +12,9 @@
  */
 class CfgProgramas extends BaseCfgProgramas
 {
+  public function __toString()
+  {
+    return sprintf('%s', $this->getPrograma());
+  }
 
 }

@@ -1,3 +1,12 @@
+<?php slot('path') ?>
+    <li>
+    <a href="<?php echo url_for('home/index') ?>">Inicio</a>
+    </li>
+    <li class="last">|
+    <a href="">Distritos</a>
+    </li>
+<?php end_slot(); ?>
+
 <h1>Listado de Distritos</h1>
 
 <table>

@@ -12,5 +12,9 @@
  */
 class Zones extends BaseZones
 {
+  public function __toString()
+  {
+    return sprintf('%s', $this->getZone());
+  }
 
 }
