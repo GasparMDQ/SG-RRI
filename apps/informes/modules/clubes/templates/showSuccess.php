@@ -9,7 +9,7 @@
     <a href="<?php echo url_for('distritos/show?id='.$clubes->getDistritoId()) ?>"><?php echo $clubes->getDistritos()->getDistrito() ?></a>
     </li>
     <li class="last">|
-    <a href=""><?php echo $clubes->getClub() ?></a>
+    <?php echo $clubes->getClub() ?>
     </li>
 <?php end_slot(); ?>
 

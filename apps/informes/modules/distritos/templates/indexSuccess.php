@@ -3,7 +3,7 @@
     <a href="<?php echo url_for('home/index') ?>">Inicio</a>
     </li>
     <li class="last">|
-    <a href="">Distritos</a>
+    Distritos
     </li>
 <?php end_slot(); ?>
 

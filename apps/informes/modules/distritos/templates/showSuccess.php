@@ -10,7 +10,7 @@
     <a href="<?php echo url_for('distritos/index') ?>">Distritos</a>
     </li>
     <li class="last">|
-    <a href=""><?php echo $distrito->getDistrito() ?></a>
+    <?php echo $distrito->getDistrito() ?>
     </li>
 <?php end_slot(); ?>
  

@@ -1,6 +1,6 @@
 <?php slot('path') ?>
     <li class="last">
-    <a href="">Inicio</a>
+    Inicio
     </li>
 <?php end_slot(); ?>
 Listado de proximos eventos <br />

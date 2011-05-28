@@ -239,6 +239,8 @@ em
 	padding: 0px;
 	margin: 0;
 	display: inline;
+	font-weight: bold;
+	font-size: x-small;
 }
 .path  a {
 	color: gray;
