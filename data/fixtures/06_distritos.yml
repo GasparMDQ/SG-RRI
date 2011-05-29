@@ -96,7 +96,7 @@ Distritos:
     4100:
         id:     26
         distrito:   4100
-        aim_id: 13
+        aim_id: 14
         zone_id: 21
     4690:
         id:     27
@@ -105,7 +105,7 @@ Distritos:
     4130:
         id:     28
         distrito:   4130
-        aim_id: 13
+        aim_id: 14
         zone_id: 21
     4280:
         id:     30
